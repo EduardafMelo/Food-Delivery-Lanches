@@ -7,13 +7,13 @@
     <title>Cardápio | Food</title>
 
     <meta name="description"
-        content="Confira o cardápio completo: burgers artesanais, porções e bebidas. Peça pelo WhatsApp ou telefone.">
+        content="Confira o cardápio completo: burgers artesanais, porções, doces e bebidas. Peça pelo WhatsApp ou telefone.">
 
     <meta name="theme-color" content="#ffcb45">
 
     <meta property="og:title" content="Cardápio | Food">
     <meta property="og:description"
-        content="Confira o cardápio completo: burgers artesanais, porções e bebidas. Peça pelo WhatsApp ou telefone.">
+        content="Confira o cardápio completo: burgers artesanais, porções, doces e bebidas. Peça pelo WhatsApp ou telefone.">
 
     <meta property="og:type" content="website">
     <meta property="og:image" content="src/img/hero.png">
@@ -21,14 +21,11 @@
     <link rel="icon" href="src/img/favicon.svg" type="image/svg+xml">
 
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        crossorigin="anonymous">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- JQUERY (APENAS UMA VEZ) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
@@ -36,43 +33,43 @@
 
 <header>
 
-    <nav id="navbar">
+<nav id="navbar">
 
-        <a href="index.html" id="nav_logo">
-            <i class="fa-solid fa-burger"></i> food
-        </a>
+    <a href="index.html" id="nav_logo">
+        <i class="fa-solid fa-burger"></i> food
+    </a>
 
-        <ul id="nav_list">
-            <li class="nav-item"><a href="index.html#home">Início</a></li>
-            <li class="nav-item"><a href="index.html#how-it-works">Como funciona</a></li>
-            <li class="nav-item active"><a href="cardapio.html">Cardápio</a></li>
-            <li class="nav-item"><a href="avaliacoes.html">Avaliações</a></li>
-            <li class="nav-item"><a href="sobre.html">Sobre</a></li>
-            <li class="nav-item"><a href="contato.html">Contato</a></li>
-        </ul>
+    <ul id="nav_list">
+        <li class="nav-item"><a href="index.html#home">Início</a></li>
+        <li class="nav-item"><a href="index.html#how-it-works">Como funciona</a></li>
+        <li class="nav-item active"><a href="cardapio.html">Cardápio</a></li>
+        <li class="nav-item"><a href="avaliacoes.html">Avaliações</a></li>
+        <li class="nav-item"><a href="sobre.html">Sobre</a></li>
+        <li class="nav-item"><a href="contato.html">Contato</a></li>
+    </ul>
 
-        <a class="btn-default"
-           href="https://wa.me/5511999999999?text=Olá%2C%20quero%20fazer%20um%20pedido"
-           target="_blank">
-            Peça agora
-        </a>
+    <a class="btn-default"
+       href="https://wa.me/5511999999999?text=Olá%2C%20quero%20fazer%20um%20pedido"
+       target="_blank">
+        Peça agora
+    </a>
 
-        <button id="mobile_btn">
-            <i class="fa-solid fa-bars"></i>
-        </button>
+    <button id="mobile_btn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
 
-    </nav>
+</nav>
 
-    <div id="mobile_menu">
-        <ul id="mobile_nav_list">
-            <li class="nav-item"><a href="index.html#home">Início</a></li>
-            <li class="nav-item"><a href="index.html#how-it-works">Como funciona</a></li>
-            <li class="nav-item active"><a href="cardapio.html">Cardápio</a></li>
-            <li class="nav-item"><a href="avaliacoes.html">Avaliações</a></li>
-            <li class="nav-item"><a href="sobre.html">Sobre</a></li>
-            <li class="nav-item"><a href="contato.html">Contato</a></li>
-        </ul>
-    </div>
+<div id="mobile_menu">
+    <ul id="mobile_nav_list">
+        <li class="nav-item"><a href="index.html#home">Início</a></li>
+        <li class="nav-item"><a href="index.html#how-it-works">Como funciona</a></li>
+        <li class="nav-item active"><a href="cardapio.html">Cardápio</a></li>
+        <li class="nav-item"><a href="avaliacoes.html">Avaliações</a></li>
+        <li class="nav-item"><a href="sobre.html">Sobre</a></li>
+        <li class="nav-item"><a href="contato.html">Contato</a></li>
+    </ul>
+</div>
 
 </header>
 
@@ -89,7 +86,7 @@
         <h1 class="page-title">Escolha seu pedido</h1>
 
         <p class="page-subtitle">
-            Itens feitos na hora, ingredientes selecionados e combinações especiais.
+            Itens feitos na hora com ingredientes selecionados.
         </p>
 
     </div>
@@ -100,7 +97,6 @@
     <h2 class="section-title">Nosso Cardápio</h2>
     <h3 class="section-subtitle">Confira todas as opções disponíveis</h3>
 
-    <!-- ABAS -->
     <div class="menu-tabs">
         <button class="menu-tab active" data-category="all">Todos</button>
         <button class="menu-tab" data-category="salgados">Salgados</button>
@@ -108,79 +104,106 @@
         <button class="menu-tab" data-category="bebidas">Bebidas</button>
     </div>
 
-    <!-- ITENS -->
     <div class="menu-items" id="menu_items">
 
         <!-- SALGADOS -->
         <div class="dish" data-category="salgados">
-            <img src="src/img/dish.png" class="dish-image">
-            <h3 class="dish-title">Burger Artesanal</h3>
-            <span class="dish-description">Pão, carne e queijo especial.</span>
+            <img src="src/img/dish.png">
+            <h3>Hambúrguer Artesanal Clássico</h3>
+            <span>Pão macio, carne suculenta e queijo derretido.</span>
             <div class="dish-price"><h4>R$20,00</h4></div>
         </div>
 
         <div class="dish" data-category="salgados">
             <img src="src/img/dish2.png">
-            <h3>Batata Suprema</h3>
-            <span>Batatas crocantes e temperadas.</span>
+            <h3>Batata Suprema Crocante</h3>
+            <span>Batatas douradas com tempero especial da casa.</span>
             <div class="dish-price"><h4>R$20,00</h4></div>
         </div>
 
         <div class="dish" data-category="salgados">
+            <img src="src/img/dish4.png">
+            <h3>Frango Crocante Empanado</h3>
+            <span>Frango super crocante por fora e suculento por dentro.</span>
+            <div class="dish-price"><h4>R$22,00</h4></div>
+        </div>
+
+        <div class="dish" data-category="salgados">
             <img src="src/img/lasanha.jpg">
-            <h3>Lasanha Especial</h3>
-            <span>Cremosa com muito queijo.</span>
+            <h3>Lasanha Caseira Especial</h3>
+            <span>Camadas de massa, molho e muito queijo.</span>
             <div class="dish-price"><h4>R$14,00</h4></div>
         </div>
 
         <div class="dish" data-category="salgados">
             <img src="src/img/pizza.jpg">
-            <h3>Pizza Artesanal</h3>
-            <span>Massa leve e ingredientes frescos.</span>
+            <h3>Pizza Artesanal da Casa</h3>
+            <span>Massa leve com ingredientes frescos e selecionados.</span>
             <div class="dish-price"><h4>R$40,00</h4></div>
+        </div>
+
+        <div class="dish" data-category="salgados">
+            <img src="src/img/combo.jpg">
+            <h3>Combo Clássico (Burger + Batata + Bebida)</h3>
+            <span>Combinação perfeita para uma refeição completa.</span>
+            <div class="dish-price"><h4>R$34,00</h4></div>
+        </div>
+
+        <div class="dish" data-category="salgados">
+            <img src="src/img/combo2.jpg">
+            <h3>Combo Família Especial</h3>
+            <span>Ideal para compartilhar com a família ou amigos.</span>
+            <div class="dish-price"><h4>R$64,00</h4></div>
         </div>
 
         <!-- DOCES -->
         <div class="dish" data-category="doces">
             <img src="src/img/bolo.jpg">
-            <h3>Bolo Caseiro</h3>
-            <span>Fatia fofinha e saborosa.</span>
+            <h3>Bolo Caseiro de Chocolate</h3>
+            <span>Fatia fofinha com sabor caseiro irresistível.</span>
             <div class="dish-price"><h4>R$18,00</h4></div>
         </div>
 
         <div class="dish" data-category="doces">
+            <img src="src/img/panqueca.jpg">
+            <h3>Panqueca Doce Recheada</h3>
+            <span>Panqueca macia com recheio doce especial.</span>
+            <div class="dish-price"><h4>R$10,00</h4></div>
+        </div>
+
+        <div class="dish" data-category="doces">
             <img src="src/img/torta.jpg">
-            <h3>Torta Especial</h3>
-            <span>Recheio irresistível.</span>
+            <h3>Torta Cremosa da Casa</h3>
+            <span>Textura suave com recheio delicioso.</span>
             <div class="dish-price"><h4>R$9,00</h4></div>
         </div>
 
         <div class="dish" data-category="doces">
             <img src="src/img/copodosonhos.jpg">
             <h3>Copo dos Sonhos</h3>
-            <span>Camadas de chocolate e creme.</span>
+            <span>Camadas de creme, chocolate e cobertura especial.</span>
             <div class="dish-price"><h4>R$18,00</h4></div>
         </div>
 
         <!-- BEBIDAS -->
         <div class="dish" data-category="bebidas">
             <img src="src/img/refrigerante.png">
-            <h3>Refrigerante</h3>
-            <span>Lata gelada.</span>
+            <h3>Refrigerante Gelado</h3>
+            <span>Lata bem gelada para acompanhar seu pedido.</span>
             <div class="dish-price"><h4>R$6,00</h4></div>
         </div>
 
         <div class="dish" data-category="bebidas">
             <img src="src/img/drink.jpg">
-            <h3>Suco Natural</h3>
-            <span>Feito na hora.</span>
+            <h3>Suco Natural Fresco</h3>
+            <span>Feito na hora com frutas selecionadas.</span>
             <div class="dish-price"><h4>R$8,00</h4></div>
         </div>
 
         <div class="dish" data-category="bebidas">
             <img src="src/img/cappucino.webp">
-            <h3>Cappuccino</h3>
-            <span>Cremoso e quente.</span>
+            <h3>Cappuccino Cremoso</h3>
+            <span>Quente, cremoso e com espuma especial.</span>
             <div class="dish-price"><h4>R$14,00</h4></div>
         </div>
 
@@ -195,7 +218,7 @@
     <span>&copy 2026 Maria Eduarda</span>
 </footer>
 
-<!-- SCRIPT FINAL CORRIGIDO -->
+<!-- SCRIPT -->
 <script>
 $(document).ready(function () {
 
@@ -232,13 +255,6 @@ $(document).ready(function () {
             });
 
         });
-    });
-
-    // ANIMAÇÃO
-    ScrollReveal().reveal('.dish', {
-        origin: 'left',
-        distance: '20px',
-        duration: 1000
     });
 
 });
