@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Food</title>
+    <meta name="description" content="Fale com a Food: WhatsApp, telefone e formulário. Atendimento rápido para pedidos, dúvidas e parcerias.">
+    <meta name="theme-color" content="#ffcb45">
+    <meta property="og:title" content="Contato | Food">
+    <meta property="og:description" content="WhatsApp, telefone e formulário. Atendimento rápido para pedidos, dúvidas e parcerias.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="src/img/hero.png">
+    <link rel="icon" href="src/img/favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <a href="index.html" id="nav_logo" aria-label="Voltar para a página inicial">
+                <i class="fa-solid fa-burger"></i> food
+            </a>
+
+            <ul id="nav_list">
+                <li class="nav-item">
+                    <a href="index.html#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#how-it-works">Como funciona</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cardapio.html">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="avaliacoes.html">Avaliações</a>
+                </li>
+                <li class="nav-item">
+                    <a href="sobre.html">Sobre</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="contato.html">Contato</a>
+                </li>
+            </ul>
+
+            <a class="btn-default" href="https://wa.me/5511999999999?text=Olá%2C%20quero%20fazer%20um%20pedido" target="_blank" rel="noopener noreferrer">Peça agora</a>
+
+            <button id="mobile_btn" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="index.html#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#how-it-works">Como funciona</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cardapio.html">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="avaliacoes.html">Avaliações</a>
+                </li>
+                <li class="nav-item">
+                    <a href="sobre.html">Sobre</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="contato.html">Contato</a>
+                </li>
+            </ul>
+
+            <a class="btn-default" href="https://wa.me/5511999999999?text=Olá%2C%20quero%20fazer%20um%20pedido" target="_blank" rel="noopener noreferrer">Peça agora</a>
+        </div>
+    </header>
+
+    <main id="content">
+        <section class="page-hero">
+            <div class="page-hero-inner">
+                <div class="kicker">
+                    <span class="kicker-badge">
+                        <i class="fa-solid fa-comments"></i>
+                        Atendimento
+                    </span>
+                </div>
+                <h1 class="page-title">Fale com a gente</h1>
+                <p class="page-subtitle">
+                    Pedidos, dúvidas, feedbacks e parcerias. Resposta rápida pelo WhatsApp.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div class="contact-grid">
+                <div>
+                    <div class="grid-2">
+                        <div class="card">
+                            <h2 class="card-title">Horário</h2>
+                            <div class="list">
+                                <div class="list-item">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <div>Seg a Dom: 18h às 23h</div>
+                                </div>
+                                <div class="list-item">
+                                    <i class="fa-solid fa-bolt"></i>
+                                    <div>Entrega média: 30–50 min</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h2 class="card-title">Endereço</h2>
+                            <div class="list">
+                                <div class="list-item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <div>Rua Exemplo, 123 — Centro</div>
+                                </div>
+                                <div class="list-item">
+                                    <i class="fa-solid fa-truck-fast"></i>
+                                    <div>Área de entrega: até 6 km</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin-top: 18px;">
+                        <h2 class="card-title">Canais</h2>
+                        <div class="contact-actions">
+                            <a class="btn-default" href="https://wa.me/5511999999999?text=Olá%2C%20quero%20fazer%20um%20pedido" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <a class="btn-default btn-secondary" href="tel:+5555555">
+                                <i class="fa-solid fa-phone"></i> Telefone
+                            </a>
+                            <a class="btn-default btn-secondary" href="mailto:contato@food.com?subject=Contato%20-%20Food">
+                                <i class="fa-solid fa-envelope"></i> E-mail
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="map-embed" aria-label="Mapa de localização">
+                        <iframe
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            src="https://www.google.com/maps?q=Centro%20S%C3%A3o%20Paulo&output=embed">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2 class="card-title">Envie uma mensagem</h2>
+                    <p style="margin-bottom: 12px;">
+                        Preencha os campos e nós abrimos um e-mail pronto para você enviar.
+                    </p>
+
+                    <form id="contact_form" class="form-grid" novalidate>
+                        <div class="field">
+                            <label for="contact_name">Nome</label>
+                            <input id="contact_name" name="name" type="text" autocomplete="name" required placeholder="Seu nome">
+                        </div>
+                        <div class="field">
+                            <label for="contact_phone">Telefone (opcional)</label>
+                            <input id="contact_phone" name="phone" type="tel" autocomplete="tel" placeholder="(11) 99999-9999">
+                        </div>
+                        <div class="field">
+                            <label for="contact_message">Mensagem</label>
+                            <textarea id="contact_message" name="message" rows="6" required placeholder="Escreva sua mensagem"></textarea>
+                        </div>
+                        <button class="btn-default" type="submit">Enviar</button>
+                        <div id="contact_notice" class="notice" style="display:none;"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="src/img/wave.svg" alt="">
+
+        <div id="footer_items">
+            <span id="copyright">
+                &copy 2026 Maria Eduarda
+            </span>
+
+            <div class="social-media-buttons">
+                <a href="https://wa.me/5511999999999?text=Olá%2C%20quero%20fazer%20um%20pedido" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/script.js"></script>
+</body>
+
+</html>

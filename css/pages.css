@@ -1,0 +1,133 @@
+.page-hero {
+    padding-top: 34px;
+    padding-bottom: 34px;
+}
+
+.page-hero-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    color: rgba(29, 29, 29, 0.7);
+}
+
+.kicker-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(29, 29, 29, 0.1);
+    border-radius: 999px;
+    box-shadow: var(--shadow-sm);
+}
+
+.page-title {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.05;
+    color: var(--color-neutral-1);
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: rgba(29, 29, 29, 0.78);
+    line-height: 1.7;
+    max-width: 68ch;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.card {
+    background: var(--color-neutral-0);
+    border: 1px solid rgba(29, 29, 29, 0.08);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 18px;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--color-neutral-1);
+}
+
+.card p {
+    color: rgba(29, 29, 29, 0.78);
+    line-height: 1.7;
+}
+
+.list {
+    display: grid;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.list-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.list-item i {
+    margin-top: 3px;
+    color: var(--color-primary-6);
+}
+
+.form-grid {
+    display: grid;
+    gap: 12px;
+}
+
+.field label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--color-neutral-1);
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(29, 29, 29, 0.14);
+    padding: 12px 12px;
+    background: rgba(255, 255, 255, 0.75);
+    font-size: 1rem;
+    outline: none;
+}
+
+.field input:focus,
+.field textarea:focus {
+    border-color: rgba(233, 162, 9, 0.45);
+    box-shadow: 0 0 0 4px rgba(233, 162, 9, 0.18);
+}
+
+.notice {
+    padding: 12px 14px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(29, 29, 29, 0.14);
+    background: rgba(255, 255, 255, 0.55);
+    color: rgba(29, 29, 29, 0.82);
+    line-height: 1.6;
+}
+
+.notice strong {
+    color: var(--color-neutral-1);
+}
+
+@media screen and (max-width: 900px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}

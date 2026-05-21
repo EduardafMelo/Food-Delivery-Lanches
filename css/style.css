@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('header.css');
+@import url('home.css');
+@import url('how-it-works.css');
+@import url('pages.css');
+@import url('cardapio.css');
+@import url('contato.css');
+@import url('menu.css');
+@import url('testimonials.css');
+@import url('footer.css');
+
+:root {
+    --color-primary-1: #fff9ea;
+    --color-primary-2: #ffe8b4;
+    --color-primary-3: #f8d477;
+    --color-primary-4: #ffe100;
+    --color-primary-5: #ffcb45;
+    --color-primary-6: #e9a209;
+
+    --color-neutral-0: #fff;
+    --color-neutral-1: #1d1d1d;
+
+    --radius-md: 12px;
+    --radius-lg: 18px;
+
+    --shadow-sm: 0 8px 22px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 14px 34px rgba(0, 0, 0, 0.12);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: radial-gradient(900px 600px at 20% -10%, rgba(255, 225, 0, 0.22), transparent 60%),
+        radial-gradient(900px 600px at 100% 20%, rgba(233, 162, 9, 0.16), transparent 55%),
+        var(--color-primary-1);
+    color: var(--color-neutral-1);
+}
+
+section {
+    padding: clamp(22px, 4vw, 40px) 8%;
+}
+
+.btn-default,
+.btn-default:visited {
+    text-decoration: none;
+}
+
+.btn-default {
+    user-select: none;
+}
+
+.btn-default i {
+    line-height: 1;
+}
+
+.btn-secondary {
+    box-shadow: none;
+}
+
+.btn-secondary:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+@media screen and (min-width: 1200px) {
+    section {
+        padding-left: calc((100vw - 1100px) / 2);
+        padding-right: calc((100vw - 1100px) / 2);
+    }
+}
+.btn-default {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary-5);
+    color: var(--color-neutral-1);
+    border-radius: var(--radius-md);
+    padding: 10px 14px;
+    font-weight: 600;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+}
+
+.btn-default:hover {
+    background-color: var(--color-primary-3);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-default:focus-visible {
+    outline: 3px solid rgba(233, 162, 9, 0.45);
+    outline-offset: 2px;
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(29, 29, 29, 0.14);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.social-media-buttons {
+    display: flex;
+    gap: 18px;
+}
+
+.social-media-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 40px;
+    background-color: var(--color-neutral-0);
+    font-size: 1.25rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--color-neutral-1);
+    box-shadow: var(--shadow-sm);
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.social-media-buttons a:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.social-media-buttons a:focus-visible {
+    outline: 3px solid rgba(233, 162, 9, 0.45);
+    outline-offset: 2px;
+}
+
+.section-title {
+    color: var(--color-primary-6);
+    font-size: 1.563rem;
+}
+
+.section-subtitle {
+    font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+} 

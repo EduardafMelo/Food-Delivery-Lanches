@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food | Delivery & Lanches</title>
+    <meta name="description"
+        content="Lanches artesanais, porções e refeições com entrega rápida. Peça pelo WhatsApp ou telefone e receba em casa.">
+    <meta name="theme-color" content="#ffcb45">
+    <meta property="og:title" content="Food | Delivery & Lanches">
+    <meta property="og:description"
+        content="Lanches artesanais, porções e refeições com entrega rápida. Peça pelo WhatsApp ou telefone e receba em casa.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="src/img/hero.png">
+    <link rel="icon" href="src/img/favicon.svg" type="image/svg+xml">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Restaurant",
+            "name": "Food",
+            "servesCuisine": "Lanches e refeições",
+            "telephone": "+55 55 5555-5555",
+            "url": "index.html"
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav id="navbar">
+            <a href="#home" id="nav_logo" aria-label="Ir para o início">
+                <i class="fa-solid fa-burger"></i> food
+            </a>
+
+            <ul id="nav_list">
+                <li class="nav-item active">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#how-it-works">Como funciona</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cardapio.html">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="avaliacoes.html">Avaliações</a>
+                </li>
+                <li class="nav-item">
+                    <a href="sobre.html">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contato.html">Contato</a>
+                </li>
+            </ul>
+
+            <a class="btn-default" href="https://wa.me/5511999999999?text=Olá%2C%20quero%20fazer%20um%20pedido"
+                target="_blank" rel="noopener noreferrer">Peça agora</a>
+
+            <button id="mobile_btn" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#how-it-works">Como funciona</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cardapio.html">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="avaliacoes.html">Avaliações</a>
+                </li>
+                <li class="nav-item">
+                    <a href="sobre.html">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contato.html">Contato</a>
+                </li>
+            </ul>
+
+            <a class="btn-default" href="https://wa.me/5511999999999?text=Olá%2C%20quero%20fazer%20um%20pedido"
+                target="_blank" rel="noopener noreferrer">Peça agora</a>
+        </div>
+    </header>
+
+    <main id="content">
+
+        <!-- HOME -->
+        <section id="home">
+            <div class="shape">
+                <div class="dots"></div>
+            </div>
+
+            <div id="cta">
+                <h1 class="title">
+                    O sabor que conquista <span>você</span>
+                </h1>
+
+                <p class="description">
+                    Aqui cada prato é preparado com carinho, ingredientes selecionados e muito sabor.
+                    Do clássico ao especial, entregamos experiências que vão além da fome.
+                </p>
+
+                <div id="cta_buttons">
+                    <a href="cardapio.html" class="btn-default">Ver cardápio completo</a>
+
+                    <a href="tel:+5555555" id="phone_button">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Peça agora pelo telefone</span>
+                    </a>
+                </div>
+
+                <div class="social-media-buttons">
+                    <a href="https://wa.me/5511999999999?text=Olá%2C%20quero%20fazer%20um%20pedido" target="_blank"
+                        rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+
+            <div id="banner">
+                
+                <img src="src/img/banner4.png" alt="Hambúrguer artesanal com ingredientes frescos">
+            </div>
+        </section>
+
+        <section id="how-it-works">
+            <div class="section-head">
+                <h2 class="section-title">Como funciona</h>
+                    <h3 class="section-subtitle">Do pedido à entrega em poucos minutos</h3>
+            </div>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h4 class="step-title">Escolha seu prato</h4>
+                    <p class="step-description">Veja o cardápio e monte seu pedido com os favoritos da casa.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                    <h4 class="step-title">Confirme o pedido</h4>
+                    <p class="step-description">Finalize em segundos e acompanhe tudo com tranquilidade.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fa-solid fa-motorcycle"></i>
+                    </div>
+                    <h4 class="step-title">Receba em casa</h4>
+                    <p class="step-description">Entrega rápida, embalagem caprichada e sabor garantido.</p>
+                </div>
+            </div>
+
+            <div class="how-cta">
+                <a class="btn-default" href="#menu">Ver cardápio</a>
+                <a class="btn-default btn-secondary" href="tel:+5555555">Falar no telefone</a>
+            </div>
+        </section>
+
+        <!-- MENU -->
+        <section id="menu">
+            <h2 class="section-title">Destaques</h2>
+            <h3 class="section-subtitle">Os mais pedidos da semana</h3>
+
+            <div id="dishes">
+
+                <!-- DISH 1 -->
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/dish.png" class="dish-image" alt="Burger artesanal">
+
+                    <h3 class="dish-title">Burger Artesanal</h3>
+
+                    <span class="dish-description">
+                        Pão macio, carne suculenta, queijo derretido e um molho especial irresistível.
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(500+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$20,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- DISH 2 -->
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/dish2.png" class="dish-image" alt="Batata suprema">
+
+                    <h3 class="dish-title">Batata Suprema</h3>
+
+                    <span class="dish-description">
+                        Crocante por fora, macia por dentro e com tempero especial da casa.
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(500+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$20,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- DISH 3 -->
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/dish3.png" class="dish-image" alt="Wrap especial">
+
+                    <h3 class="dish-title">Wrap Especial</h3>
+
+                    <span class="dish-description">
+                        Leve, saboroso e feito com ingredientes frescos para qualquer momento do dia.
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(500+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$20,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- DISH 4 -->
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/dish4.png" class="dish-image" alt="Frango crocante">
+
+                    <h3 class="dish-title">Frango Crocante</h3>
+
+                    <span class="dish-description">
+                        Empanado perfeito, extremamente crocante e com sabor irresistível.
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(500+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$20,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <img src="src/img/wave.svg" alt="">
+
+        <div id="footer_items">
+            <span id="copyright">
+                &copy 2026 Maria Eduarda
+            </span>
+
+            <div class="social-media-buttons">
+                <a href="https://wa.me/5511999999999?text=Olá%2C%20quero%20fazer%20um%20pedido" target="_blank"
+                    rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                        class="fa-brands fa-facebook"></i></a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="src/script.js"></script>
+</body>
+
+</html>
