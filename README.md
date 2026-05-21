@@ -4,19 +4,11 @@ Projeto de uma landing page para um serviço de delivery de lanches, desenvolvid
 
 ---
 
-## 📸 Demonstração
-
-Adicione aqui um print do projeto:
-
-![Preview do projeto](./assets/preview.png)
-
----
-
 ## 🚀 Acesse o projeto
 
 Se estiver hospedado no Vercel ou outro serviço:
 
-👉 https://seu-link-aqui.com
+👉https://food-delivery-lanches.vercel.app/
 
 ---
 
