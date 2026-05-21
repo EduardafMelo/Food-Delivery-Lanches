@@ -26,7 +26,7 @@
 
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- ✅ JQUERY (APENAS UMA VEZ) -->
+    <!-- JQUERY (APENAS UMA VEZ) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -34,159 +34,215 @@
 
 <body>
 
-    <header>
+<header>
 
-        <nav id="navbar">
+    <nav id="navbar">
 
-            <a href="index.html" id="nav_logo">
-                <i class="fa-solid fa-burger"></i> food
-            </a>
+        <a href="index.html" id="nav_logo">
+            <i class="fa-solid fa-burger"></i> food
+        </a>
 
-            <ul id="nav_list">
+        <ul id="nav_list">
+            <li class="nav-item"><a href="index.html#home">Início</a></li>
+            <li class="nav-item"><a href="index.html#how-it-works">Como funciona</a></li>
+            <li class="nav-item active"><a href="cardapio.html">Cardápio</a></li>
+            <li class="nav-item"><a href="avaliacoes.html">Avaliações</a></li>
+            <li class="nav-item"><a href="sobre.html">Sobre</a></li>
+            <li class="nav-item"><a href="contato.html">Contato</a></li>
+        </ul>
 
-                <li class="nav-item"><a href="index.html#home">Início</a></li>
-                <li class="nav-item"><a href="index.html#how-it-works">Como funciona</a></li>
-                <li class="nav-item active"><a href="cardapio.html">Cardápio</a></li>
-                <li class="nav-item"><a href="avaliacoes.html">Avaliações</a></li>
-                <li class="nav-item"><a href="sobre.html">Sobre</a></li>
-                <li class="nav-item"><a href="contato.html">Contato</a></li>
+        <a class="btn-default"
+           href="https://wa.me/5511999999999?text=Olá%2C%20quero%20fazer%20um%20pedido"
+           target="_blank">
+            Peça agora
+        </a>
 
-            </ul>
+        <button id="mobile_btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
-            <a class="btn-default"
-                href="https://wa.me/5511999999999?text=Olá%2C%20quero%20fazer%20um%20pedido"
-                target="_blank">
-                Peça agora
-            </a>
+    </nav>
 
-            <button id="mobile_btn">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+    <div id="mobile_menu">
+        <ul id="mobile_nav_list">
+            <li class="nav-item"><a href="index.html#home">Início</a></li>
+            <li class="nav-item"><a href="index.html#how-it-works">Como funciona</a></li>
+            <li class="nav-item active"><a href="cardapio.html">Cardápio</a></li>
+            <li class="nav-item"><a href="avaliacoes.html">Avaliações</a></li>
+            <li class="nav-item"><a href="sobre.html">Sobre</a></li>
+            <li class="nav-item"><a href="contato.html">Contato</a></li>
+        </ul>
+    </div>
 
-        </nav>
+</header>
 
-        <div id="mobile_menu">
+<main id="content">
 
-            <ul id="mobile_nav_list">
+<section class="page-hero">
+    <div class="page-hero-inner">
 
-                <li class="nav-item"><a href="index.html#home">Início</a></li>
-                <li class="nav-item"><a href="index.html#how-it-works">Como funciona</a></li>
-                <li class="nav-item active"><a href="cardapio.html">Cardápio</a></li>
-                <li class="nav-item"><a href="avaliacoes.html">Avaliações</a></li>
-                <li class="nav-item"><a href="sobre.html">Sobre</a></li>
-                <li class="nav-item"><a href="contato.html">Contato</a></li>
+        <span class="kicker-badge">
+            <i class="fa-solid fa-utensils"></i>
+            Cardápio completo
+        </span>
 
-            </ul>
+        <h1 class="page-title">Escolha seu pedido</h1>
 
+        <p class="page-subtitle">
+            Itens feitos na hora, ingredientes selecionados e combinações especiais.
+        </p>
+
+    </div>
+</section>
+
+<section id="menu-page">
+
+    <h2 class="section-title">Nosso Cardápio</h2>
+    <h3 class="section-subtitle">Confira todas as opções disponíveis</h3>
+
+    <!-- ABAS -->
+    <div class="menu-tabs">
+        <button class="menu-tab active" data-category="all">Todos</button>
+        <button class="menu-tab" data-category="salgados">Salgados</button>
+        <button class="menu-tab" data-category="doces">Doces</button>
+        <button class="menu-tab" data-category="bebidas">Bebidas</button>
+    </div>
+
+    <!-- ITENS -->
+    <div class="menu-items" id="menu_items">
+
+        <!-- SALGADOS -->
+        <div class="dish" data-category="salgados">
+            <img src="src/img/dish.png" class="dish-image">
+            <h3 class="dish-title">Burger Artesanal</h3>
+            <span class="dish-description">Pão, carne e queijo especial.</span>
+            <div class="dish-price"><h4>R$20,00</h4></div>
         </div>
 
-    </header>
+        <div class="dish" data-category="salgados">
+            <img src="src/img/dish2.png">
+            <h3>Batata Suprema</h3>
+            <span>Batatas crocantes e temperadas.</span>
+            <div class="dish-price"><h4>R$20,00</h4></div>
+        </div>
 
-    <main id="content">
+        <div class="dish" data-category="salgados">
+            <img src="src/img/lasanha.jpg">
+            <h3>Lasanha Especial</h3>
+            <span>Cremosa com muito queijo.</span>
+            <div class="dish-price"><h4>R$14,00</h4></div>
+        </div>
 
-        <section class="page-hero">
-            <div class="page-hero-inner">
+        <div class="dish" data-category="salgados">
+            <img src="src/img/pizza.jpg">
+            <h3>Pizza Artesanal</h3>
+            <span>Massa leve e ingredientes frescos.</span>
+            <div class="dish-price"><h4>R$40,00</h4></div>
+        </div>
 
-                <span class="kicker-badge">
-                    <i class="fa-solid fa-utensils"></i>
-                    Cardápio completo
-                </span>
+        <!-- DOCES -->
+        <div class="dish" data-category="doces">
+            <img src="src/img/bolo.jpg">
+            <h3>Bolo Caseiro</h3>
+            <span>Fatia fofinha e saborosa.</span>
+            <div class="dish-price"><h4>R$18,00</h4></div>
+        </div>
 
-                <h1 class="page-title">Escolha seu pedido</h1>
+        <div class="dish" data-category="doces">
+            <img src="src/img/torta.jpg">
+            <h3>Torta Especial</h3>
+            <span>Recheio irresistível.</span>
+            <div class="dish-price"><h4>R$9,00</h4></div>
+        </div>
 
-                <p class="page-subtitle">
-                    Itens feitos na hora, ingredientes selecionados e combinações especiais.
-                </p>
+        <div class="dish" data-category="doces">
+            <img src="src/img/copodosonhos.jpg">
+            <h3>Copo dos Sonhos</h3>
+            <span>Camadas de chocolate e creme.</span>
+            <div class="dish-price"><h4>R$18,00</h4></div>
+        </div>
 
-            </div>
-        </section>
+        <!-- BEBIDAS -->
+        <div class="dish" data-category="bebidas">
+            <img src="src/img/refrigerante.png">
+            <h3>Refrigerante</h3>
+            <span>Lata gelada.</span>
+            <div class="dish-price"><h4>R$6,00</h4></div>
+        </div>
 
-        <section id="menu-page">
+        <div class="dish" data-category="bebidas">
+            <img src="src/img/drink.jpg">
+            <h3>Suco Natural</h3>
+            <span>Feito na hora.</span>
+            <div class="dish-price"><h4>R$8,00</h4></div>
+        </div>
 
-            <h2 class="section-title">Nosso Cardápio</h2>
-            <h3 class="section-subtitle">Confira todas as opções disponíveis</h3>
+        <div class="dish" data-category="bebidas">
+            <img src="src/img/cappucino.webp">
+            <h3>Cappuccino</h3>
+            <span>Cremoso e quente.</span>
+            <div class="dish-price"><h4>R$14,00</h4></div>
+        </div>
 
-            <!-- ABAS -->
-            <div class="menu-tabs">
+    </div>
 
-                <button class="menu-tab active" data-category="all">Todos</button>
-                <button class="menu-tab" data-category="salgados">Salgados</button>
-                <button class="menu-tab" data-category="doces">Doces</button>
-                <button class="menu-tab" data-category="bebidas">Bebidas</button>
+</section>
 
-            </div>
+</main>
 
-            <div class="menu-items" id="menu_items">
+<footer>
+    <img src="src/img/wave.svg">
+    <span>&copy 2026 Maria Eduarda</span>
+</footer>
 
-                <!-- (TODOS OS SEUS ITEMS FICAM IGUAIS AQUI) -->
-                <!-- NÃO PRECISA MUDAR NADA -->
+<!-- SCRIPT FINAL CORRIGIDO -->
+<script>
+$(document).ready(function () {
 
-                <div class="dish" data-category="salgados">
-                    <img src="src/img/dish.png" class="dish-image">
-                    <h3 class="dish-title">Burger Artesanal</h3>
-                    <span class="dish-description">Pão macio, carne suculenta...</span>
-                    <div class="dish-price"><h4>R$20,00</h4></div>
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <footer>
-        <img src="src/img/wave.svg">
-        <span>&copy 2026 Maria Eduarda</span>
-    </footer>
-
-    <!-- ✅ SCRIPT ÚNICO (ORDENADO E CORRIGIDO) -->
-    <script>
-    $(document).ready(function () {
-
-        // MENU MOBILE
-        $('#mobile_btn').on('click', function () {
-            $('#mobile_menu').toggleClass('active');
-            $('#mobile_btn i').toggleClass('fa-bars fa-x');
-        });
-
-        $('#mobile_menu a').on('click', function () {
-            $('#mobile_menu').removeClass('active');
-            $('#mobile_btn i').removeClass('fa-x').addClass('fa-bars');
-        });
-
-        // ABAS CARDÁPIO
-        const tabs = document.querySelectorAll('.menu-tab');
-        const dishes = document.querySelectorAll('.dish');
-
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-
-                tabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-
-                const category = tab.getAttribute('data-category');
-
-                dishes.forEach(dish => {
-                    const itemCategory = dish.getAttribute('data-category');
-
-                    dish.style.display =
-                        (category === 'all' || category === itemCategory)
-                            ? 'block'
-                            : 'none';
-                });
-
-            });
-        });
-
-        // SCROLLREVEAL
-        ScrollReveal().reveal('.dish', {
-            origin: 'left',
-            distance: '20px',
-            duration: 1000
-        });
-
+    // MENU MOBILE
+    $('#mobile_btn').on('click', function () {
+        $('#mobile_menu').toggleClass('active');
+        $('#mobile_btn i').toggleClass('fa-bars fa-x');
     });
-    </script>
+
+    $('#mobile_menu a').on('click', function () {
+        $('#mobile_menu').removeClass('active');
+        $('#mobile_btn i').removeClass('fa-x').addClass('fa-bars');
+    });
+
+    // FILTRO CARDÁPIO
+    const tabs = document.querySelectorAll('.menu-tab');
+    const dishes = document.querySelectorAll('.dish');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            const category = tab.getAttribute('data-category');
+
+            dishes.forEach(dish => {
+                const itemCategory = dish.getAttribute('data-category');
+
+                dish.style.display =
+                    (category === 'all' || category === itemCategory)
+                        ? 'block'
+                        : 'none';
+            });
+
+        });
+    });
+
+    // ANIMAÇÃO
+    ScrollReveal().reveal('.dish', {
+        origin: 'left',
+        distance: '20px',
+        duration: 1000
+    });
+
+});
+</script>
 
 </body>
 </html>
