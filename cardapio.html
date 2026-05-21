@@ -24,160 +24,218 @@
 
 <body>
 
-    <header>
+<header>
 
-        <nav id="navbar">
+    <nav id="navbar">
 
-            <a href="index.html" id="nav_logo">
-                <i class="fa-solid fa-burger"></i> food
-            </a>
+        <a href="index.html" id="nav_logo">
+            <i class="fa-solid fa-burger"></i> food
+        </a>
 
-            <ul id="nav_list">
-                <li class="nav-item"><a href="index.html#home">Início</a></li>
-                <li class="nav-item"><a href="index.html#how-it-works">Como funciona</a></li>
-                <li class="nav-item active"><a href="cardapio.html">Cardápio</a></li>
-                <li class="nav-item"><a href="avaliacoes.html">Avaliações</a></li>
-                <li class="nav-item"><a href="sobre.html">Sobre</a></li>
-                <li class="nav-item"><a href="contato.html">Contato</a></li>
-            </ul>
+        <ul id="nav_list">
+            <li class="nav-item"><a href="index.html#home">Início</a></li>
+            <li class="nav-item"><a href="index.html#how-it-works">Como funciona</a></li>
+            <li class="nav-item active"><a href="cardapio.html">Cardápio</a></li>
+            <li class="nav-item"><a href="avaliacoes.html">Avaliações</a></li>
+            <li class="nav-item"><a href="sobre.html">Sobre</a></li>
+            <li class="nav-item"><a href="contato.html">Contato</a></li>
+        </ul>
 
-            <a class="btn-default"
-                href="https://wa.me/5511999999999?text=Olá%2C%20quero%20fazer%20um%20pedido">
-                Peça agora
-            </a>
+        <a class="btn-default"
+            href="https://wa.me/5511999999999?text=Olá%2C%20quero%20fazer%20um%20pedido">
+            Peça agora
+        </a>
 
-            <button id="mobile_btn">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+        <button id="mobile_btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
-        </nav>
+    </nav>
 
-        <div id="mobile_menu">
+    <div id="mobile_menu">
+        <ul id="mobile_nav_list">
+            <li class="nav-item"><a href="index.html#home">Início</a></li>
+            <li class="nav-item"><a href="index.html#how-it-works">Como funciona</a></li>
+            <li class="nav-item active"><a href="cardapio.html">Cardápio</a></li>
+            <li class="nav-item"><a href="avaliacoes.html">Avaliações</a></li>
+            <li class="nav-item"><a href="sobre.html">Sobre</a></li>
+            <li class="nav-item"><a href="contato.html">Contato</a></li>
+        </ul>
+    </div>
 
-            <ul id="mobile_nav_list">
-                <li class="nav-item"><a href="index.html#home">Início</a></li>
-                <li class="nav-item"><a href="index.html#how-it-works">Como funciona</a></li>
-                <li class="nav-item active"><a href="cardapio.html">Cardápio</a></li>
-                <li class="nav-item"><a href="avaliacoes.html">Avaliações</a></li>
-                <li class="nav-item"><a href="sobre.html">Sobre</a></li>
-                <li class="nav-item"><a href="contato.html">Contato</a></li>
-            </ul>
+</header>
 
+<main id="content">
+
+<section class="page-hero">
+    <div class="page-hero-inner">
+
+        <span class="kicker-badge">
+            <i class="fa-solid fa-utensils"></i>
+            Cardápio completo
+        </span>
+
+        <h1 class="page-title">Escolha seu pedido</h1>
+
+        <p class="page-subtitle">
+            Itens feitos na hora, ingredientes selecionados e combinações especiais.
+        </p>
+
+    </div>
+</section>
+
+<section id="menu-page">
+
+    <h2 class="section-title">Nosso Cardápio</h2>
+    <h3 class="section-subtitle">Confira todas as opções disponíveis</h3>
+
+    <div class="menu-tabs">
+        <button class="menu-tab active" data-category="all">Todos</button>
+        <button class="menu-tab" data-category="salgados">Salgados</button>
+        <button class="menu-tab" data-category="doces">Doces</button>
+        <button class="menu-tab" data-category="bebidas">Bebidas</button>
+    </div>
+
+    <div class="menu-items" id="menu_items">
+
+        <!-- 🍔 SALGADOS -->
+        <div class="dish" data-category="salgados">
+            <img src="src/img/dish.png">
+            <h3>Burger Artesanal</h3>
+            <div class="dish-price"><h4>R$20,00</h4></div>
         </div>
 
-    </header>
+        <div class="dish" data-category="salgados">
+            <img src="src/img/dish2.png">
+            <h3>Batata Suprema</h3>
+            <div class="dish-price"><h4>R$20,00</h4></div>
+        </div>
 
-    <main id="content">
+        <div class="dish" data-category="salgados">
+            <img src="src/img/dish4.png">
+            <h3>Frango Crocante</h3>
+            <div class="dish-price"><h4>R$22,00</h4></div>
+        </div>
 
-        <section class="page-hero">
+        <div class="dish" data-category="salgados">
+            <img src="src/img/dish3.png">
+            <h3>Wrap Especial</h3>
+            <div class="dish-price"><h4>R$19,00</h4></div>
+        </div>
 
-            <div class="page-hero-inner">
+        <div class="dish" data-category="salgados">
+            <img src="src/img/pizza.jpg">
+            <h3>Pizza Artesanal</h3>
+            <div class="dish-price"><h4>R$40,00</h4></div>
+        </div>
 
-                <span class="kicker-badge">
-                    <i class="fa-solid fa-utensils"></i>
-                    Cardápio completo
-                </span>
+        <div class="dish" data-category="salgados">
+            <img src="src/img/combo.jpg">
+            <h3>Combo Clássico</h3>
+            <div class="dish-price"><h4>R$34,00</h4></div>
+        </div>
 
-                <h1 class="page-title">Escolha seu pedido</h1>
+        <div class="dish" data-category="salgados">
+            <img src="src/img/combo2.jpg">
+            <h3>Combo Família</h3>
+            <div class="dish-price"><h4>R$64,00</h4></div>
+        </div>
 
-                <p class="page-subtitle">
-                    Itens feitos na hora, ingredientes selecionados e combinações especiais.
-                </p>
+        <!-- 🍰 DOCES -->
+        <div class="dish" data-category="doces">
+            <img src="src/img/bolo.jpg">
+            <h3>Bolo Caseiro</h3>
+            <div class="dish-price"><h4>R$18,00</h4></div>
+        </div>
 
-            </div>
+        <div class="dish" data-category="doces">
+            <img src="src/img/panqueca.jpg">
+            <h3>Panqueca Doce</h3>
+            <div class="dish-price"><h4>R$10,00</h4></div>
+        </div>
 
-        </section>
+        <div class="dish" data-category="doces">
+            <img src="src/img/torta.jpg">
+            <h3>Torta Especial</h3>
+            <div class="dish-price"><h4>R$9,00</h4></div>
+        </div>
 
-        <section id="menu-page">
+        <div class="dish" data-category="doces">
+            <img src="src/img/copodosonhos.jpg">
+            <h3>Copo dos Sonhos</h3>
+            <div class="dish-price"><h4>R$18,00</h4></div>
+        </div>
 
-            <h2 class="section-title">Nosso Cardápio</h2>
-            <h3 class="section-subtitle">Confira todas as opções disponíveis</h3>
+        <!-- 🥤 BEBIDAS -->
+        <div class="dish" data-category="bebidas">
+            <img src="src/img/refrigerante.png">
+            <h3>Refrigerante Lata</h3>
+            <div class="dish-price"><h4>R$6,00</h4></div>
+        </div>
 
-            <div class="menu-tabs">
+        <div class="dish" data-category="bebidas">
+            <img src="src/img/drink.jpg">
+            <h3>Suco Natural</h3>
+            <div class="dish-price"><h4>R$8,00</h4></div>
+        </div>
 
-                <button class="menu-tab active" data-category="all">Todos</button>
-                <button class="menu-tab" data-category="salgados">Salgados</button>
-                <button class="menu-tab" data-category="doces">Doces</button>
-                <button class="menu-tab" data-category="bebidas">Bebidas</button>
+        <div class="dish" data-category="bebidas">
+            <img src="src/img/cappucino.webp">
+            <h3>Cappuccino Cremoso</h3>
+            <div class="dish-price"><h4>R$14,00</h4></div>
+        </div>
 
-            </div>
+    </div>
 
-            <div class="menu-items" id="menu_items">
+</section>
 
-                <!-- TODOS OS SEUS ITENS ORIGINAIS -->
-                <!-- NÃO ALTEREI NENHUM NOME -->
+</main>
 
-                <div class="dish" data-category="salgados">
-                    <img src="src/img/dish.png" class="dish-image">
-                    <h3 class="dish-title">Burger Artesanal</h3>
-                    <span class="dish-description">Pão macio, carne suculenta...</span>
-                    <div class="dish-price"><h4>R$20,00</h4></div>
-                </div>
+<footer>
+    <img src="src/img/wave.svg">
+    <span>&copy 2026 Maria Eduarda</span>
+</footer>
 
-                <div class="dish" data-category="bebidas">
-                    <img src="src/img/refrigerante.png">
-                    <h3 class="dish-title">Refrigerante Lata</h3>
-                    <div class="dish-price"><h4>R$6,00</h4></div>
-                </div>
+<script>
+$(document).ready(function () {
 
-                <div class="dish" data-category="doces">
-                    <img src="src/img/bolo.jpg">
-                    <h3 class="dish-title">Bolo Caseiro</h3>
-                    <div class="dish-price"><h4>R$18,00</h4></div>
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <footer>
-        <img src="src/img/wave.svg">
-        <span>&copy 2026 Maria Eduarda</span>
-    </footer>
-
-    <!-- JS CORRIGIDO (SÓ BOTÃO MOBILE) -->
-    <script>
-    $(document).ready(function () {
-
-        // BOTÃO MOBILE CORRIGIDO
-        $('#mobile_btn').on('click', function () {
-            $('#mobile_menu').toggleClass('active');
-            $('#mobile_btn i').toggleClass('fa-bars fa-x');
-        });
-
-        $('#mobile_menu a').on('click', function () {
-            $('#mobile_menu').removeClass('active');
-            $('#mobile_btn i').removeClass('fa-x').addClass('fa-bars');
-        });
-
-        // FILTRO CARDÁPIO (SEU ORIGINAL)
-        const tabs = document.querySelectorAll('.menu-tab');
-        const dishes = document.querySelectorAll('.dish');
-
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-
-                tabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-
-                const category = tab.getAttribute('data-category');
-
-                dishes.forEach(dish => {
-                    const itemCategory = dish.getAttribute('data-category');
-
-                    dish.style.display =
-                        (category === 'all' || category === itemCategory)
-                            ? 'block'
-                            : 'none';
-                });
-
-            });
-        });
-
+    // ✅ BOTÃO MOBILE (CORRIGIDO)
+    $('#mobile_btn').on('click', function () {
+        $('#mobile_menu').toggleClass('active');
+        $('#mobile_btn i').toggleClass('fa-bars fa-x');
     });
-    </script>
+
+    $('#mobile_menu a').on('click', function () {
+        $('#mobile_menu').removeClass('active');
+        $('#mobile_btn i').removeClass('fa-x').addClass('fa-bars');
+    });
+
+    // FILTRO CARDÁPIO
+    const tabs = document.querySelectorAll('.menu-tab');
+    const dishes = document.querySelectorAll('.dish');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            const category = tab.getAttribute('data-category');
+
+            dishes.forEach(dish => {
+                const itemCategory = dish.getAttribute('data-category');
+
+                dish.style.display =
+                    (category === 'all' || category === itemCategory)
+                        ? 'block'
+                        : 'none';
+            });
+
+        });
+    });
+
+});
+</script>
 
 </body>
 </html>
