@@ -34,9 +34,6 @@ O objetivo deste projeto é simular um site real de delivery, aplicando conhecim
 
 ---
 
-
----
-
 ## ✨ Funcionalidades
 
 - Página inicial com apresentação do serviço
