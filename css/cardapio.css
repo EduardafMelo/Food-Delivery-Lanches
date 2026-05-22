@@ -39,7 +39,7 @@
     margin-top: 22px;
 }
 
-/* CARD DO PRATO */
+/* CARD */
 .menu-items .dish {
     width: 100%;
     grid-column: span 4;
@@ -49,15 +49,23 @@
     text-align: center;
 }
 
-/* IMAGEM PADRONIZADA E CENTRALIZADA */
+/* IMAGEM BASE (PADRÃO) */
 .menu-items .dish img {
     width: 100%;
     height: 220px;
-    object-fit: cover;
-    object-position: center;
     border-radius: 18px;
     display: block;
     background: #f5f5f5;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* 🔥 AJUSTE ESPECIAL PARA IMAGENS QUE ESTAVAM COM MUITO ZOOM */
+.menu-items .dish:nth-child(3) img,
+.menu-items .dish:nth-child(7) img {
+    object-fit: contain;
+    background: #fff;
+    padding: 8px;
 }
 
 /* RESPONSIVO */
@@ -76,6 +84,10 @@
         height: 200px;
     }
 }
+
+/* =============================== */
+/* BOTÃO MOBILE (NÃO MEXER) */
+/* =============================== */
 
 #navbar {
     position: relative;
