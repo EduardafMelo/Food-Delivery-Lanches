@@ -9,27 +9,14 @@
 .menu-tab {
     border: 1px solid rgba(29, 29, 29, 0.14);
     background: rgba(255, 255, 255, 0.6);
-    color: var(--color-neutral-1);
     border-radius: 999px;
     padding: 10px 14px;
     font-weight: 700;
     cursor: pointer;
-    transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
-}
-
-.menu-tab:hover {
-    background: rgba(255, 255, 255, 0.9);
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-sm);
 }
 
 .menu-tab.active {
-    border-color: rgba(233, 162, 9, 0.45);
-    background: linear-gradient(
-        135deg,
-        rgba(255, 225, 0, 0.45),
-        rgba(233, 162, 9, 0.25)
-    );
+    background: #ffcb45;
 }
 
 .menu-items {
@@ -40,64 +27,45 @@
 }
 
 /* CARD */
-.menu-items .dish {
-    width: 100%;
+.dish {
     grid-column: span 4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
 }
 
-/* 🔥 CONTAINER DA IMAGEM (CORRETO PARA BORDAS REDONDAS) */
-.menu-items .dish img {
+/* CONTAINER IMAGEM PADRÃO */
+.img-box {
     width: 100%;
-    height: 220px;
+    height: 230px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* IMAGEM PADRÃO */
+.img-box img {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    object-position: center;
-
-    border-radius: 18px;
-
-    background: #ffffff;
-
     display: block;
 }
 
 /* RESPONSIVO */
-@media screen and (max-width: 992px) {
-    .menu-items .dish {
+@media (max-width: 992px) {
+    .dish {
         grid-column: span 6;
     }
 }
 
-@media screen and (max-width: 600px) {
-    .menu-items .dish {
+@media (max-width: 600px) {
+    .dish {
         grid-column: span 12;
     }
 
-    .menu-items .dish img {
+    .img-box {
         height: 200px;
     }
-}
-
-/* BOTÃO MOBILE */
-#navbar {
-    position: relative;
-    z-index: 99999;
-}
-
-#mobile_btn {
-    position: relative;
-    z-index: 100000;
-    cursor: pointer;
-    pointer-events: auto;
-}
-
-#mobile_btn i {
-    pointer-events: none;
-}
-
-#mobile_menu {
-    z-index: 99998;
 }
