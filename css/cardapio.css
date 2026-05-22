@@ -5,162 +5,220 @@
 #menu-page {
     width: 100%;
     padding: 40px 8%;
+    background-color: #fff9ea;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
-    background-color: #fff9ea;
 }
+
+.section-title {
+    font-size: 2.2rem;
+    color: #1d1d1d;
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
+    color: #434343;
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   BOTÕES DE CATEGORIA
+========================================= */
 
 .menu-tabs {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 
 .menu-tab {
     border: none;
-    padding: 10px 22px;
+    padding: 12px 24px;
     border-radius: 14px;
     background-color: #f1f1f1;
     font-weight: 600;
     cursor: pointer;
-    transition: .3s ease;
-}
-
-.menu-tab:hover {
-    background-color: #ffe8a3;
+    transition: 0.3s;
+    font-size: 1rem;
 }
 
 .menu-tab.active {
     background-color: #ffcb45;
-    color: #1d1d1d;
 }
 
-.menu-items {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 28px;
-    margin-top: 32px;
-}
-
-.dish {
-    background-color: #ffffff;
-    border-radius: 28px;
-    padding: 18px;
-    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.08);
-    position: relative;
-    overflow: hidden;
-    transition: .3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.dish:hover {
-    transform: translateY(-6px);
-}
-
-.dish-heart {
-    position: absolute;
-    background-color: #ffcb45;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    color: #e63946;
-    width: 48px;
-    height: 48px;
-    right: -10px;
-    top: -10px;
-    border-radius: 0px 24px 0px 42px;
+.menu-tab:hover {
+    transform: translateY(-2px);
 }
 
 /* =========================================
-   IMAGENS DOS PRATOS
+   GRID DOS CARDS
+========================================= */
+
+.menu-items {
+    width: 100%;
+    max-width: 1400px;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 28px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.dish {
+    background-color: #ffffff;
+
+    border-radius: 28px;
+
+    padding: 18px;
+
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    min-height: 480px;
+
+    transition: 0.3s;
+}
+
+.dish:hover {
+    transform: translateY(-5px);
+}
+
+/* =========================================
+   CORAÇÃO
+========================================= */
+
+.dish-heart {
+    position: absolute;
+
+    width: 52px;
+    height: 52px;
+
+    background-color: #ffcb45;
+
+    right: 0;
+    top: 0;
+
+    border-radius: 0 24px 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   IMAGENS
 ========================================= */
 
 .dish img,
 .dish-image {
     width: 100%;
+
     height: 220px;
+
     border-radius: 22px;
+
     display: block;
+
     object-fit: cover;
-    transition: .3s ease;
+}
+
+/* IMAGENS QUE ESTAVAM CORTADAS */
+
+.dish img[src*="lasanha"],
+.dish img[src*="torta"],
+.dish img[src*="copodosonhos"],
+.dish img[src*="cappucino"] {
+
+    object-fit: contain;
+
+    background-color: #fff;
+
+    padding: 10px;
 }
 
 /* =========================================
-   IMAGENS ESPECÍFICAS CORRIGIDAS
+   TEXTOS
 ========================================= */
 
-/* LASANHA */
-.dish img[src*="lasanha"] {
-    object-fit: contain;
-    background-color: #fff;
-    padding: 8px;
-}
-
-/* TORTA */
-.dish img[src*="torta"] {
-    object-fit: contain;
-    background-color: #fff;
-    padding: 8px;
-}
-
-/* COPO DOS SONHOS */
-.dish img[src*="copodosonhos"] {
-    object-fit: contain;
-    background-color: #fff;
-    padding: 8px;
-}
-
-/* CAPPUCCINO */
-.dish img[src*="cappucino"] {
-    object-fit: contain;
-    background-color: #fff;
-    padding: 8px;
-}
-
-.dish-title,
-.dish h3 {
+.dish h3,
+.dish-title {
     margin-top: 18px;
-    font-size: 1.3rem;
+
+    font-size: 1.4rem;
+
     color: #1d1d1d;
+
     text-align: center;
 }
 
-.dish-description,
-.dish span {
-    color: #434343;
+.dish span,
+.dish-description {
     text-align: center;
-    margin-top: 8px;
-    line-height: 1.4;
+
+    color: #434343;
+
+    margin-top: 10px;
+
+    line-height: 1.5;
 }
+
+/* =========================================
+   AVALIAÇÃO
+========================================= */
 
 .dish-rate {
     color: #ffcb45;
+
     margin-top: 14px;
 }
 
+/* =========================================
+   PREÇO
+========================================= */
+
 .dish-price {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 18px;
+    margin-top: auto;
+
     width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding-top: 20px;
 }
 
 .dish-price h4 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+
     color: #1d1d1d;
 }
 
 /* =========================================
-   RESPONSIVIDADE
+   RESPONSIVO
 ========================================= */
 
 @media screen and (max-width: 768px) {
@@ -169,9 +227,12 @@
         grid-template-columns: 1fr;
     }
 
-    .dish img,
-    .dish-image {
-        height: 200px;
+    .dish {
+        min-height: auto;
     }
 
+    .dish img,
+    .dish-image {
+        height: 230px;
+    }
 }
