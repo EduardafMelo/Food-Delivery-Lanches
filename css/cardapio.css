@@ -14,22 +14,6 @@
     padding: 10px 14px;
     font-weight: 700;
     cursor: pointer;
-    transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
-}
-
-.menu-tab:hover {
-    background: rgba(255, 255, 255, 0.9);
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-sm);
-}
-
-.menu-tab.active {
-    border-color: rgba(233, 162, 9, 0.45);
-    background: linear-gradient(
-        135deg,
-        rgba(255, 225, 0, 0.45),
-        rgba(233, 162, 9, 0.25)
-    );
 }
 
 .menu-items {
@@ -41,7 +25,6 @@
 
 /* CARD */
 .menu-items .dish {
-    width: 100%;
     grid-column: span 4;
     display: flex;
     flex-direction: column;
@@ -49,17 +32,17 @@
     text-align: center;
 }
 
-/* 🔥 IMAGEM MENOR + BORDAS MAIS REDONDAS */
+/* 🔥 FRAME DA IMAGEM (ISSO AQUI É O SEGREDO) */
 .menu-items .dish img {
     width: 100%;
-    height: 190px; /* ↓ diminuído */
+    height: 190px;
 
     object-fit: contain;
     object-position: center;
 
-    border-radius: 25px; /* ↑ mais redondo */
+    border-radius: 20px;
 
-    background: #ffffff;
+    background: #fff;
 
     display: block;
 }
@@ -81,23 +64,7 @@
     }
 }
 
-/* BOTÃO MOBILE */
-#navbar {
-    position: relative;
-    z-index: 99999;
-}
-
-#mobile_btn {
-    position: relative;
-    z-index: 100000;
-    cursor: pointer;
-    pointer-events: auto;
-}
-
-#mobile_btn i {
-    pointer-events: none;
-}
-
-#mobile_menu {
-    z-index: 99998;
-}
+/* MOBILE */
+#navbar { z-index: 99999; }
+#mobile_btn { z-index: 100000; }
+#mobile_menu { z-index: 99998; }
