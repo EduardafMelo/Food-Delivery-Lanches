@@ -49,15 +49,15 @@
     text-align: center;
 }
 
-/* 🔥 CONTAINER DA IMAGEM (CORRETO PARA BORDAS REDONDAS) */
+/* 🔥 IMAGEM MENOR + BORDAS MAIS REDONDAS */
 .menu-items .dish img {
     width: 100%;
-    height: 220px;
+    height: 190px; /* ↓ diminuído */
 
     object-fit: contain;
     object-position: center;
 
-    border-radius: 18px;
+    border-radius: 25px; /* ↑ mais redondo */
 
     background: #ffffff;
 
@@ -77,7 +77,7 @@
     }
 
     .menu-items .dish img {
-        height: 200px;
+        height: 170px;
     }
 }
 
