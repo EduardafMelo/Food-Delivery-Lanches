@@ -1,103 +1,55 @@
 /* =========================
-   HOME
+   TABS DO CARDÁPIO
 ========================= */
 
-#home {
+.menu-tabs {
     display: flex;
-    min-height: calc(100vh - 91px);
-    position: relative;
-    align-items: center;
-    justify-content: space-between;
-    gap: clamp(28px, 6vw, 110px);
-    overflow: hidden;
-    padding: 40px 6%;
-}
-
-/* =========================
-   SHAPE
-========================= */
-
-.shape {
-    background: radial-gradient(
-        circle at 30% 30%,
-        rgba(255, 225, 0, 0.35),
-        rgba(255, 225, 0, 0.12)
-    );
-
-    width: 50%;
-    height: 90%;
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    border-radius: 48% 36% 0% 22%;
-    z-index: 0;
-
-    overflow: hidden;
-}
-
-.dots {
-    position: absolute;
-    inset: 0;
-}
-
-/* bolinhas */
-.dots::before,
-.dots::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-}
-
-/* =========================
-   CTA
-========================= */
-
-#cta {
-    flex: 0 1 560px;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    z-index: 2;
-    transform: translateY(-15px);
-}
-
-/* =========================
-   BANNER
-========================= */
-
-#banner {
-    flex: 1;
-    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 2;
+    margin-top: 16px;
 }
 
-#banner img {
-    width: 100%;
-    max-width: 650px;
-    border-radius: 80px;
-    object-fit: cover;
-    transition: 0.3s ease;
+.menu-tab {
+    border: 1px solid rgba(29, 29, 29, 0.14);
+    background: rgba(255, 255, 255, 0.6);
+    color: var(--color-neutral-1);
+    border-radius: 999px;
+    padding: 10px 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
 }
 
-#banner img:hover {
-    transform: scale(1.02);
+.menu-tab:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.menu-tab.active {
+    border-color: rgba(233, 162, 9, 0.45);
+    background: linear-gradient(
+        135deg,
+        rgba(255, 225, 0, 0.45),
+        rgba(233, 162, 9, 0.25)
+    );
 }
 
 /* =========================
-   CARDÁPIO
+   GRID DO CARDÁPIO
 ========================= */
 
 .menu-items {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 18px;
+    margin-top: 22px;
 }
 
+/* CARD */
 .menu-items .dish {
+    width: 100%;
     grid-column: span 4;
     display: flex;
     flex-direction: column;
@@ -105,41 +57,20 @@
     text-align: center;
 }
 
+/* IMAGEM PADRÃO */
 .menu-items .dish img {
     width: 100%;
-    height: 190px;
+    height: 210px; /* leve ajuste pra ficar mais equilibrado */
     object-fit: cover;
     object-position: center;
     border-radius: 18px;
+    display: block;
     background: #f5f5f5;
+    transition: transform 0.3s ease;
 }
 
-/* =========================
-   MAIS PEDIDOS DA SEMANA
-   (PADRONIZADO + MAIS LARGO)
-========================= */
-
-#dishes {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 18px;
-}
-
-#dishes .dish {
-    grid-column: span 6; /* 🔥 MAIS LARGO */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-#dishes .dish img {
-    width: 100%;
-    height: 180px; /* 🔥 altura reduzida */
-    object-fit: cover;
-    object-position: center;
-    border-radius: 18px;
-    background: #f5f5f5;
+.menu-items .dish img:hover {
+    transform: scale(1.03);
 }
 
 /* =========================
@@ -148,29 +79,22 @@
 
 @media screen and (max-width: 992px) {
 
-    .menu-items .dish,
-    #dishes .dish {
+    .menu-items .dish {
         grid-column: span 6;
     }
 
     .menu-items .dish img {
-        height: 180px;
-    }
-
-    #dishes .dish img {
-        height: 170px;
+        height: 190px;
     }
 }
 
 @media screen and (max-width: 600px) {
 
-    .menu-items .dish,
-    #dishes .dish {
+    .menu-items .dish {
         grid-column: span 12;
     }
 
-    .menu-items .dish img,
-    #dishes .dish img {
+    .menu-items .dish img {
         height: 200px;
     }
 }
@@ -188,6 +112,11 @@
     position: relative;
     z-index: 100000;
     cursor: pointer;
+    pointer-events: auto;
+}
+
+#mobile_btn i {
+    pointer-events: none;
 }
 
 #mobile_menu {
