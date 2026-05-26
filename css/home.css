@@ -14,7 +14,7 @@
 }
 
 /* =========================
-   SHAPE
+   SHAPE (FUNDO AMARELO)
 ========================= */
 
 .shape {
@@ -36,21 +36,86 @@
     overflow: hidden;
 }
 
+/* =========================
+   BOLINHAS DENTRO DO SHAPE
+========================= */
+
 .dots {
     position: absolute;
     inset: 0;
 }
 
-/* bolinhas */
-.dots::before,
-.dots::after {
+/* =========================
+   BOLINHAS GRANDES
+========================= */
+
+.dots::before {
     content: "";
     position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #d4a300;
     border-radius: 50%;
+
+    box-shadow:
+        20px 40px 0 #d4a300,
+        60px 80px 0 #d4a300,
+        100px 30px 0 #d4a300,
+        140px 120px 0 #d4a300,
+        180px 60px 0 #d4a300,
+        220px 140px 0 #d4a300,
+        260px 90px 0 #d4a300,
+        300px 160px 0 #d4a300,
+        340px 60px 0 #d4a300,
+        380px 120px 0 #d4a300,
+        420px 80px 0 #d4a300,
+        460px 140px 0 #d4a300,
+        500px 60px 0 #d4a300,
+        540px 120px 0 #d4a300,
+        580px 80px 0 #d4a300;
+
+    opacity: 0.55;
 }
 
 /* =========================
-   CTA
+   BOLINHAS PEQUENAS
+========================= */
+
+.dots::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #b8860b;
+    border-radius: 50%;
+
+    box-shadow:
+        10px 100px 0 #b8860b,
+        40px 160px 0 #b8860b,
+        70px 60px 0 #b8860b,
+        90px 200px 0 #b8860b,
+        120px 140px 0 #b8860b,
+        150px 90px 0 #b8860b,
+        180px 220px 0 #b8860b,
+        210px 120px 0 #b8860b,
+        240px 180px 0 #b8860b,
+        270px 70px 0 #b8860b,
+        300px 200px 0 #b8860b,
+        330px 110px 0 #b8860b,
+        360px 170px 0 #b8860b,
+        390px 60px 0 #b8860b,
+        420px 140px 0 #b8860b,
+        450px 200px 0 #b8860b,
+        480px 90px 0 #b8860b,
+        510px 160px 0 #b8860b,
+        540px 120px 0 #b8860b,
+        570px 70px 0 #b8860b;
+
+    opacity: 0.35;
+}
+
+/* =========================
+   CTA (LADO ESQUERDO)
 ========================= */
 
 #cta {
@@ -62,8 +127,23 @@
     transform: translateY(-15px);
 }
 
+#cta .title {
+    font-size: clamp(2.2rem, 4.3vw, 4rem);
+    color: var(--color-neutral-1);
+    line-height: 1.05;
+}
+
+#cta .title span {
+    color: var(--color-primary-6);
+}
+
+#cta .description {
+    font-size: 1.2rem;
+    color: #555;
+}
+
 /* =========================
-   BANNER
+   BANNER (LADO DIREITO)
 ========================= */
 
 #banner {
@@ -75,11 +155,20 @@
     z-index: 2;
 }
 
+/* IMAGEM */
 #banner img {
     width: 100%;
     max-width: 650px;
-    border-radius: 80px;
+    height: auto;
     object-fit: cover;
+    right: -30px;
+    top: -10px;
+
+    border-radius: 80px;
+
+    position: relative;
+    z-index: 3;
+
     transition: 0.3s ease;
 }
 
@@ -88,59 +177,30 @@
 }
 
 /* =========================
-   CARDÁPIO
+   BOTÕES
 ========================= */
 
-.menu-items {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 18px;
-}
-
-.menu-items .dish {
-    grid-column: span 4;
+#cta_buttons {
     display: flex;
-    flex-direction: column;
+    gap: 24px;
     align-items: center;
-    text-align: center;
+    flex-wrap: wrap;
 }
 
-.menu-items .dish img {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 18px;
-    background: #f5f5f5;
-}
-
-/* =========================
-   MAIS PEDIDOS DA SEMANA
-   (PADRONIZADO + MAIS LARGO)
-========================= */
-
-#dishes {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 12px;
-    width: 90%;
-}
-
-#dishes .dish {
-    grid-column: span 8; 
+#phone_button {
     display: flex;
-    flex-direction: column;
+    gap: 10px;
     align-items: center;
-    text-align: center;
+    background-color: #ffffff;
+    padding: 10px 16px;
+    font-weight: 500;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    transition: 0.3s ease;
 }
 
-#dishes .dish img {
-    width: 100%;
-    height: 190px; 
-    object-fit: cover;
-    object-position: center;
-    border-radius: 18px;
-    background: #f5f5f5;
+#phone_button:hover {
+    transform: translateY(-3px);
 }
 
 /* =========================
@@ -149,36 +209,145 @@
 
 @media screen and (max-width: 992px) {
 
-    .menu-items .dish,
-    #dishes .dish {
+    #home {
+        min-height: auto;
+        padding-bottom: 60px;
+    }
+
+    #banner {
+        display: none;
+    }
+
+    .shape {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    #cta .title {
+        font-size: 2rem;
+    }
+
+    #cta .description {
+        font-size: 1rem;
+    }
+
+    #banner img {
+        max-width: 100%;
+        border-radius: 24px;
+    }
+}
+
+/* =========================
+   TABS CARDÁPIO
+========================= */
+
+.menu-tabs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.menu-tab {
+    border: 1px solid rgba(29, 29, 29, 0.14);
+    background: rgba(255, 255, 255, 0.6);
+    color: var(--color-neutral-1);
+    border-radius: 999px;
+    padding: 10px 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+}
+
+.menu-tab:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.menu-tab.active {
+    border-color: rgba(233, 162, 9, 0.45);
+    background: linear-gradient(
+        135deg,
+        rgba(255, 225, 0, 0.45),
+        rgba(233, 162, 9, 0.25)
+    );
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 18px;
+    margin-top: 22px;
+}
+
+/* CARD DO PRATO */
+.menu-items .dish {
+    width: 100%;
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* IMAGEM PADRONIZADA CARDÁPIO */
+.menu-items .dish img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px;
+    display: block;
+    background: #f5f5f5;
+}
+
+/* =========================
+   MAIS PEDIDOS DA SEMANA
+   (PADRONIZADO IGUAL CARDÁPIO)
+========================= */
+
+#dishes .dish img,
+.dishes .dish img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px;
+    display: block;
+    background: #f5f5f5;
+}
+
+/* RESPONSIVO */
+@media screen and (max-width: 992px) {
+    .menu-items .dish {
         grid-column: span 6;
     }
 
-    .menu-items .dish img {
-        height: 180px;
-    }
-
-    #dishes .dish img {
-        height: 170px;
+    #dishes .dish img,
+    .dishes .dish img {
+        height: 210px;
     }
 }
 
 @media screen and (max-width: 600px) {
 
-    .menu-items .dish,
-    #dishes .dish {
+    .menu-items .dish {
         grid-column: span 12;
     }
 
-    .menu-items .dish img,
-    #dishes .dish img {
+    .menu-items .dish img {
+        height: 200px;
+    }
+
+    #dishes .dish img,
+    .dishes .dish img {
         height: 200px;
     }
 }
-
-/* =========================
-   NAVBAR
-========================= */
 
 #navbar {
     position: relative;
@@ -189,8 +358,13 @@
     position: relative;
     z-index: 100000;
     cursor: pointer;
+    pointer-events: auto;
+}
+
+#mobile_btn i {
+    pointer-events: none;
 }
 
 #mobile_menu {
     z-index: 99998;
-}
+} aumente aqui tambem e me mande completo
