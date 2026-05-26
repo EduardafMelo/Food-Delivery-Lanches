@@ -1,246 +1,5 @@
 /* =========================
-   HOME
-========================= */
-
-#home {
-    display: flex;
-    min-height: calc(100vh - 91px);
-    position: relative;
-    align-items: center;
-    justify-content: space-between;
-    gap: clamp(28px, 6vw, 110px);
-    overflow: hidden;
-    padding: 40px 6%;
-}
-
-/* =========================
-   SHAPE (FUNDO AMARELO)
-========================= */
-
-.shape {
-    background: radial-gradient(
-        circle at 30% 30%,
-        rgba(255, 225, 0, 0.35),
-        rgba(255, 225, 0, 0.12)
-    );
-
-    width: 50%;
-    height: 90%;
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    border-radius: 48% 36% 0% 22%;
-    z-index: 0;
-
-    overflow: hidden;
-}
-
-/* =========================
-   BOLINHAS DENTRO DO SHAPE
-========================= */
-
-.dots {
-    position: absolute;
-    inset: 0;
-}
-
-/* =========================
-   BOLINHAS GRANDES
-========================= */
-
-.dots::before {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: #d4a300;
-    border-radius: 50%;
-
-    box-shadow:
-        20px 40px 0 #d4a300,
-        60px 80px 0 #d4a300,
-        100px 30px 0 #d4a300,
-        140px 120px 0 #d4a300,
-        180px 60px 0 #d4a300,
-        220px 140px 0 #d4a300,
-        260px 90px 0 #d4a300,
-        300px 160px 0 #d4a300,
-        340px 60px 0 #d4a300,
-        380px 120px 0 #d4a300,
-        420px 80px 0 #d4a300,
-        460px 140px 0 #d4a300,
-        500px 60px 0 #d4a300,
-        540px 120px 0 #d4a300,
-        580px 80px 0 #d4a300;
-
-    opacity: 0.55;
-}
-
-/* =========================
-   BOLINHAS PEQUENAS
-========================= */
-
-.dots::after {
-    content: "";
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background: #b8860b;
-    border-radius: 50%;
-
-    box-shadow:
-        10px 100px 0 #b8860b,
-        40px 160px 0 #b8860b,
-        70px 60px 0 #b8860b,
-        90px 200px 0 #b8860b,
-        120px 140px 0 #b8860b,
-        150px 90px 0 #b8860b,
-        180px 220px 0 #b8860b,
-        210px 120px 0 #b8860b,
-        240px 180px 0 #b8860b,
-        270px 70px 0 #b8860b,
-        300px 200px 0 #b8860b,
-        330px 110px 0 #b8860b,
-        360px 170px 0 #b8860b,
-        390px 60px 0 #b8860b,
-        420px 140px 0 #b8860b,
-        450px 200px 0 #b8860b,
-        480px 90px 0 #b8860b,
-        510px 160px 0 #b8860b,
-        540px 120px 0 #b8860b,
-        570px 70px 0 #b8860b;
-
-    opacity: 0.35;
-}
-
-/* =========================
-   CTA (LADO ESQUERDO)
-========================= */
-
-#cta {
-    flex: 0 1 560px;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    z-index: 2;
-    transform: translateY(-15px);
-}
-
-#cta .title {
-    font-size: clamp(2.2rem, 4.3vw, 4rem);
-    color: var(--color-neutral-1);
-    line-height: 1.05;
-}
-
-#cta .title span {
-    color: var(--color-primary-6);
-}
-
-#cta .description {
-    font-size: 1.2rem;
-    color: #555;
-}
-
-/* =========================
-   BANNER (LADO DIREITO)
-========================= */
-
-#banner {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-}
-
-/* IMAGEM */
-#banner img {
-    width: 100%;
-    max-width: 650px;
-    height: auto;
-    object-fit: cover;
-    right: -30px;
-    top: -10px;
-
-    border-radius: 80px;
-
-    position: relative;
-    z-index: 3;
-
-    transition: 0.3s ease;
-}
-
-#banner img:hover {
-    transform: scale(1.02);
-}
-
-/* =========================
-   BOTÕES
-========================= */
-
-#cta_buttons {
-    display: flex;
-    gap: 24px;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-#phone_button {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 10px 16px;
-    font-weight: 500;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
-    border-radius: 16px;
-    transition: 0.3s ease;
-}
-
-#phone_button:hover {
-    transform: translateY(-3px);
-}
-
-/* =========================
-   RESPONSIVO
-========================= */
-
-@media screen and (max-width: 992px) {
-
-    #home {
-        min-height: auto;
-        padding-bottom: 60px;
-    }
-
-    #banner {
-        display: none;
-    }
-
-    .shape {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 450px) {
-
-    #cta .title {
-        font-size: 2rem;
-    }
-
-    #cta .description {
-        font-size: 1rem;
-    }
-
-    #banner img {
-        max-width: 100%;
-        border-radius: 24px;
-    }
-}
-
-/* =========================
-   TABS CARDÁPIO
+   TABS DO CARDÁPIO
 ========================= */
 
 .menu-tabs {
@@ -277,6 +36,10 @@
     );
 }
 
+/* =========================
+   GRID DO CARDÁPIO
+========================= */
+
 .menu-items {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -284,7 +47,7 @@
     margin-top: 22px;
 }
 
-/* CARD DO PRATO */
+/* CARD */
 .menu-items .dish {
     width: 100%;
     grid-column: span 4;
@@ -294,42 +57,34 @@
     text-align: center;
 }
 
-/* IMAGEM PADRONIZADA CARDÁPIO */
+/* IMAGEM PADRÃO */
 .menu-items .dish img {
     width: 100%;
-    height: 220px;
+    height: 210px; /* leve ajuste pra ficar mais equilibrado */
     object-fit: cover;
     object-position: center;
     border-radius: 18px;
     display: block;
     background: #f5f5f5;
+    transition: transform 0.3s ease;
+}
+
+.menu-items .dish img:hover {
+    transform: scale(1.03);
 }
 
 /* =========================
-   MAIS PEDIDOS DA SEMANA
+   RESPONSIVO
 ========================= */
 
-#dishes .dish img,
-.dishes .dish img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 18px;
-    display: block;
-    background: #f5f5f5;
-}
-
-/* RESPONSIVO */
 @media screen and (max-width: 992px) {
 
     .menu-items .dish {
         grid-column: span 6;
     }
 
-    #dishes .dish img,
-    .dishes .dish img {
-        height: 240px;
+    .menu-items .dish img {
+        height: 190px;
     }
 }
 
@@ -342,12 +97,11 @@
     .menu-items .dish img {
         height: 200px;
     }
-
-    #dishes .dish img,
-    .dishes .dish img {
-        height: 220px;
-    }
 }
+
+/* =========================
+   NAVBAR
+========================= */
 
 #navbar {
     position: relative;
