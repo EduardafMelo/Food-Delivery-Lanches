@@ -33,7 +33,7 @@
     border-radius: 48% 36% 0% 22%;
     z-index: 0;
 
-    overflow: hidden; /* garante bolinhas dentro */
+    overflow: hidden;
 }
 
 /* =========================
@@ -46,7 +46,7 @@
 }
 
 /* =========================
-   BOLINHAS GRANDES (MAIS DENSAS)
+   BOLINHAS GRANDES
 ========================= */
 
 .dots::before {
@@ -78,7 +78,7 @@
 }
 
 /* =========================
-   BOLINHAS PEQUENAS (MAIS DENSAS)
+   BOLINHAS PEQUENAS
 ========================= */
 
 .dots::after {
@@ -124,7 +124,7 @@
     flex-direction: column;
     gap: 28px;
     z-index: 2;
-    transform: translateY(-15px); 
+    transform: translateY(-15px);
 }
 
 #cta .title {
@@ -210,8 +210,8 @@
 @media screen and (max-width: 992px) {
 
     #home {
-        min-height: auto;   /* 🔥 remove o espaço vazio */
-        padding-bottom: 60px; /* mantém respiro bonito */
+        min-height: auto;
+        padding-bottom: 60px;
     }
 
     #banner {
@@ -237,4 +237,134 @@
         max-width: 100%;
         border-radius: 24px;
     }
+}
+
+/* =========================
+   TABS CARDÁPIO
+========================= */
+
+.menu-tabs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.menu-tab {
+    border: 1px solid rgba(29, 29, 29, 0.14);
+    background: rgba(255, 255, 255, 0.6);
+    color: var(--color-neutral-1);
+    border-radius: 999px;
+    padding: 10px 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+}
+
+.menu-tab:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.menu-tab.active {
+    border-color: rgba(233, 162, 9, 0.45);
+    background: linear-gradient(
+        135deg,
+        rgba(255, 225, 0, 0.45),
+        rgba(233, 162, 9, 0.25)
+    );
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 18px;
+    margin-top: 22px;
+}
+
+/* CARD DO PRATO */
+.menu-items .dish {
+    width: 100%;
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* IMAGEM PADRONIZADA CARDÁPIO */
+.menu-items .dish img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px;
+    display: block;
+    background: #f5f5f5;
+}
+
+/* =========================
+   MAIS PEDIDOS DA SEMANA
+   (PADRONIZADO IGUAL CARDÁPIO)
+========================= */
+
+#dishes .dish img,
+.dishes .dish img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px;
+    display: block;
+    background: #f5f5f5;
+}
+
+/* RESPONSIVO */
+@media screen and (max-width: 992px) {
+    .menu-items .dish {
+        grid-column: span 6;
+    }
+
+    #dishes .dish img,
+    .dishes .dish img {
+        height: 210px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .menu-items .dish {
+        grid-column: span 12;
+    }
+
+    .menu-items .dish img {
+        height: 200px;
+    }
+
+    #dishes .dish img,
+    .dishes .dish img {
+        height: 200px;
+    }
+}
+
+#navbar {
+    position: relative;
+    z-index: 99999;
+}
+
+#mobile_btn {
+    position: relative;
+    z-index: 100000;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+#mobile_btn i {
+    pointer-events: none;
+}
+
+#mobile_menu {
+    z-index: 99998;
 }
