@@ -95,7 +95,10 @@
     }
 
     .menu-items .dish img {
-        height: 200px;
+        height: 160px;
+        object-fit: cover;
+        object-position: center 30%; /* melhora foco no centro do prato */
+        border-radius: 16px;
     }
 }
 
