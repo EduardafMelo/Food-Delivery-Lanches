@@ -1,3 +1,4 @@
+ 
 /* =========================
    TABS DO CARDÁPIO
 ========================= */
@@ -60,50 +61,45 @@
 }
 
 /* =========================
-   IMAGEM
+   IMAGENS (BORDA + GLOW SUAVE)
 ========================= */
 
 .menu-items .dish img,
 #dishes .dish img,
 .dishes .dish img {
     width: 100%;
-
     aspect-ratio: 4 / 3;
 
     object-fit: cover;
     object-position: center;
 
     border-radius: 18px;
-
     display: block;
-
     background: #f5f5f5;
 
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+    /* BORDA AMARELA SUAVE */
+    border: 2px solid #ffcb45;
 
-    /* 🔥 BORDA AMARELA */
-    border: 3px solid #ffcb45;
-
-    /* 🔥 SOMBRA */
+    /* SOMBRA NATURAL + GLOW LEVE */
     box-shadow:
-        0 0 0 4px rgba(255, 203, 69, 0.18),
-        0 10px 24px rgba(255, 203, 69, 0.28);
+        0 6px 14px rgba(0, 0, 0, 0.08),
+        0 0 10px rgba(255, 203, 69, 0.14);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* =========================
-   HOVER NAS IMAGENS
+   HOVER (LEVEMENTE MAIS FORTE)
 ========================= */
 
 .menu-items .dish img:hover,
 #dishes .dish img:hover,
 .dishes .dish img:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
 
     box-shadow:
-        0 0 0 6px rgba(255, 203, 69, 0.22),
-        0 14px 30px rgba(255, 203, 69, 0.38);
+        0 10px 18px rgba(0, 0, 0, 0.10),
+        0 0 14px rgba(255, 203, 69, 0.22);
 }
 
 /* =========================
