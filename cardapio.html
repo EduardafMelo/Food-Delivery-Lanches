@@ -1,404 +1,206 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!-- SALGADOS -->
+<div class="dish" data-category="salgados">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardápio | Food</title>
-
-    <meta name="description"
-        content="Confira o cardápio completo: burgers artesanais, porções e bebidas. Peça pelo WhatsApp ou telefone.">
-
-    <meta name="theme-color" content="#ffcb45">
-
-    <meta property="og:title" content="Cardápio | Food">
-    <meta property="og:description"
-        content="Confira o cardápio completo: burgers artesanais, porções e bebidas. Peça pelo WhatsApp ou telefone.">
-
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="src/img/hero.png">
-
-    <link rel="icon" href="src/img/favicon.svg" type="image/svg+xml">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        crossorigin="anonymous">
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-</head>
-
-<body>
-
-<header>
-
-    <nav id="navbar">
-
-        <a href="index.html" id="nav_logo">
-            <i class="fa-solid fa-burger"></i> food
-        </a>
-
-        <ul id="nav_list">
-            <li class="nav-item"><a href="index.html#home">Início</a></li>
-            <li class="nav-item"><a href="index.html#how-it-works">Como funciona</a></li>
-            <li class="nav-item active"><a href="cardapio.html">Cardápio</a></li>
-            <li class="nav-item"><a href="avaliacoes.html">Avaliações</a></li>
-            <li class="nav-item"><a href="sobre.html">Sobre</a></li>
-            <li class="nav-item"><a href="contato.html">Contato</a></li>
-        </ul>
-
-        <a class="btn-default" href="https://wa.me/5511999999999?text=Olá%2C%20quero%20fazer%20um%20pedido"
-            target="_blank">
-            Peça agora
-        </a>
-
-        <button id="mobile_btn">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-
-    </nav>
-
-    <div id="mobile_menu">
-        <ul id="mobile_nav_list">
-            <li class="nav-item"><a href="index.html#home">Início</a></li>
-            <li class="nav-item"><a href="index.html#how-it-works">Como funciona</a></li>
-            <li class="nav-item active"><a href="cardapio.html">Cardápio</a></li>
-            <li class="nav-item"><a href="avaliacoes.html">Avaliações</a></li>
-            <li class="nav-item"><a href="sobre.html">Sobre</a></li>
-            <li class="nav-item"><a href="contato.html">Contato</a></li>
-        </ul>
+    <div class="dish-heart">
+        <i class="fa-solid fa-heart"></i>
     </div>
 
-</header>
+    <img src="src/img/macarrao.jpg" class="dish-image" alt="Macarrão ao molho branco">
 
-<main id="content">
+    <h3 class="dish-title">Macarrão ao Molho Branco</h3>
 
-    <section class="page-hero">
-        <div class="page-hero-inner">
+    <span class="dish-description">
+        Massa cremosa ao molho branco com queijo e temperos leves, trazendo sabor caseiro e conforto em cada garfada.
+    </span>
 
-            <span class="kicker-badge">
-                <i class="fa-solid fa-utensils"></i>
-                Cardápio completo
-            </span>
+    <div class="dish-price">
+        <h4>R$26,00</h4>
+    </div>
+</div>
 
-            <h1 class="page-title">Escolha seu pedido</h1>
+<div class="dish" data-category="salgados">
 
-            <p class="page-subtitle">
-                Itens feitos na hora, ingredientes selecionados e combinações especiais.
-            </p>
+    <img src="src/img/frango.avif" class="dish-image" alt="Frango com arroz e legumes">
 
-        </div>
-    </section>
+    <h3 class="dish-title">Frango Grelhado com Arroz</h3>
 
-    <section id="menu-page">
+    <span class="dish-description">
+        Filé de frango grelhado suculento acompanhado de arroz branco soltinho e legumes salteados frescos e leves.
+    </span>
 
-        <h2 class="section-title">Nosso Cardápio</h2>
-        <h3 class="section-subtitle">Confira todas as opções disponíveis</h3>
+    <div class="dish-price">
+        <h4>R$29,00</h4>
+    </div>
+</div>
 
-        <div class="menu-tabs">
-            <button class="menu-tab active" data-category="all">Todos</button>
-            <button class="menu-tab" data-category="salgados">Salgados</button>
-            <button class="menu-tab" data-category="hamburgueres">Hambúrgueres</button>
-            <button class="menu-tab" data-category="doces">Doces</button>
-            <button class="menu-tab" data-category="bebidas">Bebidas</button>
-        </div>
+<div class="dish" data-category="salgados">
 
-        <div class="menu-items" id="menu_items">
+    <img src="src/img/lasanha.jpg" class="dish-image">
 
-            <!-- SALGADOS -->
-            <div class="dish" data-category="salgados">
+    <h3>Lasanha Especial</h3>
 
-                <div class="dish-heart">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
+    <span class="dish-description">
+        Lasanha cremosa com muito queijo derretido e molho encorpado, perfeita para quem ama sabor intenso.
+    </span>
 
-                <img src="src/img/macarrao.jpg" class="dish-image" alt="Macarrão ao molho branco">
+    <div class="dish-price">
+        <h4>R$14,00</h4>
+    </div>
+</div>
 
-                <h3 class="dish-title">Macarrão ao Molho Branco</h3>
+<div class="dish" data-category="salgados">
 
-                <span class="dish-description">
-                    Massa cremosa ao molho branco com queijo e temperos leves.
-                </span>
+    <img src="src/img/pizza.jpg" class="dish-image">
 
-                <div class="dish-rate">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <span>(500+)</span>
-                </div>
+    <h3>Pizza Artesanal</h3>
 
-                <div class="dish-price">
-                    <h4>R$26,00</h4>
-                </div>
-            </div>
+    <span class="dish-description">
+        Massa leve e crocante com ingredientes frescos selecionados, garantindo sabor equilibrado e irresistível.
+    </span>
 
-            <div class="dish" data-category="salgados">
+    <div class="dish-price">
+        <h4>R$40,00</h4>
+    </div>
+</div>
 
-                <img src="src/img/frango.avif" class="dish-image" alt="Frango com arroz e legumes">
+<div class="dish" data-category="salgados">
 
-                <h3 class="dish-title">Frango Grelhado com Arroz</h3>
+    <img src="src/img/strogonoff.jpg" class="dish-image" alt="Strogonoff de Frango">
 
-                <span class="dish-description">
-                    Filé de frango grelhado com arroz branco e legumes salteados.
-                </span>
+    <h3>Strogonoff de Frango</h3>
 
-                <div class="dish-rate">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <span>(500+)</span>
-                </div>
+    <span class="dish-description">
+        Cremoso e bem temperado, servido com arroz branco e batata palha crocante para uma refeição completa.
+    </span>
 
-                <div class="dish-price">
-                    <h4>R$29,00</h4>
-                </div>
-            </div>
+    <div class="dish-price">
+        <h4>R$32,00</h4>
+    </div>
+</div>
 
-            <div class="dish" data-category="salgados">
-                <img src="src/img/lasanha.jpg" class="dish-image">
+<!-- HAMBÚRGUERES -->
+<div class="dish" data-category="hamburgueres">
 
-                <h3>Lasanha Especial</h3>
+    <div class="dish-heart">
+        <i class="fa-solid fa-heart"></i>
+    </div>
 
-                <span>Cremosa com muito queijo.</span>
+    <img src="src/img/combo2.jpg" class="dish-image" alt="Hambúrguer Artesanal">
 
-                <div class="dish-price">
-                    <h4>R$14,00</h4>
-                </div>
-            </div>
+    <h3 class="dish-title">Hambúrguer Artesanal</h3>
 
-            <div class="dish" data-category="salgados">
-                <img src="src/img/pizza.jpg" class="dish-image">
+    <span class="dish-description">
+        Pão brioche macio, carne artesanal suculenta de 180g, cheddar derretido e molho especial da casa.
+    </span>
 
-                <h3>Pizza Artesanal</h3>
+    <div class="dish-price">
+        <h4>R$28,00</h4>
+    </div>
+</div>
 
-                <span>Massa leve e ingredientes frescos.</span>
+<div class="dish" data-category="hamburgueres">
 
-                <div class="dish-price">
-                    <h4>R$40,00</h4>
-                </div>
-            </div>
+    <img src="src/img/combo.jpg" class="dish-image" alt="Combo de Hambúrguer">
 
-            <div class="dish" data-category="salgados">
-                <img src="src/img/strogonoff.jpg" class="dish-image" alt="Strogonoff de Frango">
+    <h3 class="dish-title">Combo Burger Especial</h3>
 
-                <h3>Strogonoff de Frango</h3>
+    <span class="dish-description">
+        Hambúrguer artesanal acompanhado de batata frita crocante e refrigerante gelado para completar sua refeição.
+    </span>
 
-                <span>Cremoso com arroz e batata palha.</span>
+    <div class="dish-price">
+        <h4>R$39,90</h4>
+    </div>
+</div>
 
-                <div class="dish-price">
-                    <h4>R$32,00</h4>
-                </div>
-            </div>
+<!-- DOCES -->
+<div class="dish" data-category="doces">
 
-            <div class="dish" data-category="salgados">
+    <img src="src/img/bolo.jpg" class="dish-image">
 
-                <div class="dish-heart">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
+    <h3>Bolo Caseiro</h3>
 
-                <img src="src/img/camarao.jpg" class="dish-image" alt="Risoto de Camarão">
+    <span class="dish-description">
+        Fatia fofinha, leve e saborosa, perfeita para acompanhar café ou um lanche da tarde especial.
+    </span>
 
-                <h3>Risoto de Camarão</h3>
+    <div class="dish-price">
+        <h4>R$18,00</h4>
+    </div>
+</div>
 
-                <span>Arroz arbóreo com camarões e parmesão.</span>
+<div class="dish" data-category="doces">
 
-                <div class="dish-price">
-                    <h4>R$45,00</h4>
-                </div>
-            </div>
+    <img src="src/img/torta.jpg" class="dish-image">
 
-            <!-- HAMBÚRGUERES -->
-            <div class="dish" data-category="hamburgueres">
+    <h3>Torta Especial</h3>
 
-                <div class="dish-heart">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
+    <span class="dish-description">
+        Torta cremosa com recheio irresistível e textura suave que derrete na boca.
+    </span>
 
-                <img src="src/img/combo2.jpg" class="dish-image" alt="Hambúrguer Artesanal">
+    <div class="dish-price">
+        <h4>R$9,00</h4>
+    </div>
+</div>
 
-                <h3 class="dish-title">Hambúrguer Artesanal</h3>
+<div class="dish" data-category="doces">
 
-                <span class="dish-description">
-                    Pão brioche, carne artesanal 180g, queijo cheddar, alface e molho especial.
-                </span>
+    <img src="src/img/sonhos.jpg" class="dish-image">
 
-                <div class="dish-rate">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <span>(800+)</span>
-                </div>
+    <h3>Copo dos Sonhos</h3>
 
-                <div class="dish-price">
-                    <h4>R$28,00</h4>
-                </div>
-            </div>
+    <span class="dish-description">
+        Camadas de chocolate e creme combinadas em uma sobremesa doce, equilibrada e muito cremosa.
+    </span>
 
-            <div class="dish" data-category="hamburgueres">
+    <div class="dish-price">
+        <h4>R$18,00</h4>
+    </div>
+</div>
 
-                <img src="src/img/combo.jpg" class="dish-image" alt="Combo de Hambúrguer">
+<!-- BEBIDAS -->
+<div class="dish" data-category="bebidas">
 
-                <h3 class="dish-title">Combo Burger Especial</h3>
+    <img src="src/img/refrigerante.png" class="dish-image">
 
-                <span class="dish-description">
-                    Hambúrguer artesanal + batata frita crocante + refrigerante gelado.
-                </span>
+    <h3>Refrigerante</h3>
 
-                <div class="dish-rate">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <span>(1k+)</span>
-                </div>
+    <span class="dish-description">
+        Lata gelada e refrescante, ideal para acompanhar qualquer refeição.
+    </span>
 
-                <div class="dish-price">
-                    <h4>R$39,90</h4>
-                </div>
-            </div>
+    <div class="dish-price">
+        <h4>R$6,00</h4>
+    </div>
+</div>
 
-            <!-- DOCES -->
-            <div class="dish" data-category="doces">
-                <img src="src/img/bolo.jpg" class="dish-image">
+<div class="dish" data-category="bebidas">
 
-                <h3>Bolo Caseiro</h3>
+    <img src="src/img/drink.jpg" class="dish-image">
 
-                <span>Fatia fofinha e saborosa.</span>
+    <h3>Suco Natural</h3>
 
-                <div class="dish-price">
-                    <h4>R$18,00</h4>
-                </div>
-            </div>
+    <span class="dish-description">
+        Preparado na hora com frutas frescas, garantindo sabor natural e refrescante.
+    </span>
 
-            <div class="dish" data-category="doces">
-                <img src="src/img/torta.jpg" class="dish-image">
+    <div class="dish-price">
+        <h4>R$8,00</h4>
+    </div>
+</div>
 
-                <h3>Torta Especial</h3>
+<div class="dish" data-category="bebidas">
 
-                <span>Recheio irresistível.</span>
+    <img src="src/img/cappucino.jpg" class="dish-image">
 
-                <div class="dish-price">
-                    <h4>R$9,00</h4>
-                </div>
-            </div>
+    <h3>Cappuccino</h3>
 
-            <div class="dish" data-category="doces">
+    <span class="dish-description">
+        Bebida quente, cremosa e encorpada, perfeita para momentos de relaxamento.
+    </span>
 
-                <div class="dish-heart">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-
-                <img src="src/img/sonhos.jpg" class="dish-image">
-
-                <h3>Copo dos Sonhos</h3>
-
-                <span>Camadas de chocolate e creme.</span>
-
-                <div class="dish-price">
-                    <h4>R$18,00</h4>
-                </div>
-            </div>
-
-            <!-- BEBIDAS -->
-            <div class="dish" data-category="bebidas">
-                <img src="src/img/refrigerante.png" class="dish-image">
-
-                <h3>Refrigerante</h3>
-
-                <span>Lata gelada.</span>
-
-                <div class="dish-price">
-                    <h4>R$6,00</h4>
-                </div>
-            </div>
-
-            <div class="dish" data-category="bebidas">
-                <img src="src/img/drink.jpg" class="dish-image">
-
-                <h3>Suco Natural</h3>
-
-                <span>Feito na hora.</span>
-
-                <div class="dish-price">
-                    <h4>R$8,00</h4>
-                </div>
-            </div>
-
-            <div class="dish" data-category="bebidas">
-                <img src="src/img/cappucino.jpg" class="dish-image">
-
-                <h3>Cappuccino</h3>
-
-                <span>Cremoso e quente.</span>
-
-                <div class="dish-price">
-                    <h4>R$14,00</h4>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-</main>
-
-<footer>
-    <img src="src/img/wave.svg">
-    <span>&copy 2026 Maria Eduarda</span>
-</footer>
-
-<script>
-    $(document).ready(function () {
-
-        $('#mobile_btn').on('click', function () {
-            $('#mobile_menu').toggleClass('active');
-            $('#mobile_btn i').toggleClass('fa-bars fa-x');
-        });
-
-        $('#mobile_menu a').on('click', function () {
-            $('#mobile_menu').removeClass('active');
-            $('#mobile_btn i').removeClass('fa-x').addClass('fa-bars');
-        });
-
-        const tabs = document.querySelectorAll('.menu-tab');
-        const dishes = document.querySelectorAll('.dish');
-
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-
-                tabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-
-                const category = tab.getAttribute('data-category');
-
-                dishes.forEach(dish => {
-                    const itemCategory = dish.getAttribute('data-category');
-
-                    dish.style.display =
-                        (category === 'all' || category === itemCategory)
-                            ? 'block'
-                            : 'none';
-                });
-
-            });
-        });
-
-        ScrollReveal().reveal('.dish', {
-            origin: 'left',
-            distance: '20px',
-            duration: 1000
-        });
-
-    });
-</script>
-
-</body>
-</html>
+    <div class="dish-price">
+        <h4>R$14,00</h4>
+    </div>
+</div>
