@@ -6,68 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardápio | Food</title>
 
-    <meta name="description"
-        content="Confira o cardápio completo: burgers artesanais, porções e bebidas. Peça pelo WhatsApp ou telefone.">
+    <meta name="description" content="Confira o cardápio completo de comidas e bebidas.">
 
     <meta name="theme-color" content="#ffcb45">
 
-    <meta property="og:title" content="Cardápio | Food">
-    <meta property="og:description"
-        content="Confira o cardápio completo: burgers artesanais, porções e bebidas. Peça pelo WhatsApp ou telefone.">
-
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="src/img/hero.png">
-
-    <link rel="icon" href="src/img/favicon.svg" type="image/svg+xml">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        crossorigin="anonymous">
-
     <link rel="stylesheet" href="css/style.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
 <header>
-
     <nav id="navbar">
-
-        <a href="index.html" id="nav_logo">
-            <i class="fa-solid fa-burger"></i> food
-        </a>
+        <a href="index.html"><i class="fa-solid fa-burger"></i> food</a>
 
         <ul id="nav_list">
-            <li class="nav-item"><a href="index.html#home">Início</a></li>
-            <li class="nav-item"><a href="index.html#how-it-works">Como funciona</a></li>
-            <li class="nav-item active"><a href="cardapio.html">Cardápio</a></li>
-            <li class="nav-item"><a href="avaliacoes.html">Avaliações</a></li>
-            <li class="nav-item"><a href="sobre.html">Sobre</a></li>
-            <li class="nav-item"><a href="contato.html">Contato</a></li>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cardapio.html" class="active">Cardápio</a></li>
         </ul>
-
-        <a class="btn-default" href="https://wa.me/5511999999999?text=Olá%2C%20quero%20fazer%20um%20pedido"
-            target="_blank">
-            Peça agora
-        </a>
-
-        <button id="mobile_btn">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-
     </nav>
-
 </header>
 
-<main id="content">
+<main>
 
 <section id="menu-page">
 
-    <h2 class="section-title">Nosso Cardápio</h2>
-    <h3 class="section-subtitle">Confira todas as opções disponíveis</h3>
+    <h2>Nosso Cardápio</h2>
 
+    <!-- FILTROS -->
     <div class="menu-tabs">
         <button class="menu-tab active" data-category="all">Todos</button>
         <button class="menu-tab" data-category="salgados">Salgados</button>
@@ -76,41 +42,102 @@
         <button class="menu-tab" data-category="bebidas">Bebidas</button>
     </div>
 
-    <div class="menu-items" id="menu_items">
+    <!-- ITENS -->
+    <div class="menu-items">
 
+        <!-- SALGADOS -->
         <div class="dish" data-category="salgados">
             <img src="src/img/macarrao.jpg">
-            <h3>Macarrão ao Molho Branco</h3>
-            <span>Massa cremosa com queijo e temperos leves.</span>
-            <h4>R$26,00</h4>
+            <h3>Macarrão</h3>
+            <span>Massa cremosa com molho branco.</span>
+            <h4>R$26</h4>
         </div>
 
         <div class="dish" data-category="salgados">
             <img src="src/img/frango.avif">
             <h3>Frango Grelhado</h3>
-            <span>Frango suculento com arroz e legumes frescos.</span>
-            <h4>R$29,00</h4>
+            <span>Frango com arroz e legumes.</span>
+            <h4>R$29</h4>
         </div>
 
+        <div class="dish" data-category="salgados">
+            <img src="src/img/lasanha.jpg">
+            <h3>Lasanha</h3>
+            <span>Lasanha cremosa com queijo.</span>
+            <h4>R$14</h4>
+        </div>
+
+        <div class="dish" data-category="salgados">
+            <img src="src/img/pizza.jpg">
+            <h3>Pizza</h3>
+            <span>Ingredientes frescos e massa leve.</span>
+            <h4>R$40</h4>
+        </div>
+
+        <div class="dish" data-category="salgados">
+            <img src="src/img/strogonoff.jpg">
+            <h3>Strogonoff</h3>
+            <span>Com arroz e batata palha.</span>
+            <h4>R$32</h4>
+        </div>
+
+        <!-- HAMBÚRGUERES -->
         <div class="dish" data-category="hamburgueres">
             <img src="src/img/combo2.jpg">
             <h3>Hambúrguer Artesanal</h3>
-            <span>Pão brioche, carne suculenta e cheddar derretido.</span>
-            <h4>R$28,00</h4>
+            <span>Pão brioche, carne e cheddar.</span>
+            <h4>R$28</h4>
+        </div>
+
+        <div class="dish" data-category="hamburgueres">
+            <img src="src/img/combo.jpg">
+            <h3>Combo Burger</h3>
+            <span>Burger + fritas + refrigerante.</span>
+            <h4>R$39</h4>
+        </div>
+
+        <!-- DOCES -->
+        <div class="dish" data-category="doces">
+            <img src="src/img/bolo.jpg">
+            <h3>Bolo</h3>
+            <span>Fofinho e saboroso.</span>
+            <h4>R$18</h4>
         </div>
 
         <div class="dish" data-category="doces">
-            <img src="src/img/bolo.jpg">
-            <h3>Bolo Caseiro</h3>
-            <span>Fatia fofinha e saborosa.</span>
-            <h4>R$18,00</h4>
+            <img src="src/img/torta.jpg">
+            <h3>Torta</h3>
+            <span>Recheio cremoso.</span>
+            <h4>R$9</h4>
+        </div>
+
+        <div class="dish" data-category="doces">
+            <img src="src/img/sonhos.jpg">
+            <h3>Copo dos Sonhos</h3>
+            <span>Chocolate e creme.</span>
+            <h4>R$18</h4>
+        </div>
+
+        <!-- BEBIDAS -->
+        <div class="dish" data-category="bebidas">
+            <img src="src/img/refrigerante.png">
+            <h3>Refrigerante</h3>
+            <span>Gelado e refrescante.</span>
+            <h4>R$6</h4>
         </div>
 
         <div class="dish" data-category="bebidas">
             <img src="src/img/drink.jpg">
             <h3>Suco Natural</h3>
-            <span>Feito na hora com frutas frescas.</span>
-            <h4>R$8,00</h4>
+            <span>Feito na hora.</span>
+            <h4>R$8</h4>
+        </div>
+
+        <div class="dish" data-category="bebidas">
+            <img src="src/img/cappucino.jpg">
+            <h3>Cappuccino</h3>
+            <span>Cremoso e quente.</span>
+            <h4>R$14</h4>
         </div>
 
     </div>
@@ -119,40 +146,30 @@
 
 </main>
 
+<!-- FILTRO FUNCIONANDO -->
 <script>
-$(document).ready(function () {
+document.querySelectorAll('.menu-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
 
-    $('#mobile_btn').on('click', function () {
-        $('#mobile_menu').toggleClass('active');
-        $('#mobile_btn i').toggleClass('fa-bars fa-x');
-    });
+        document.querySelectorAll('.menu-tab')
+            .forEach(t => t.classList.remove('active'));
 
-    const tabs = document.querySelectorAll('.menu-tab');
-    const dishes = document.querySelectorAll('.dish');
+        tab.classList.add('active');
 
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
+        const category = tab.getAttribute('data-category');
 
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
+        document.querySelectorAll('.dish').forEach(dish => {
 
-            const category = tab.getAttribute('data-category');
+            const itemCategory = dish.getAttribute('data-category');
 
-            dishes.forEach(dish => {
-
-                const itemCategory = dish.getAttribute('data-category');
-
-                if (category === 'all' || category === itemCategory) {
-                    dish.style.display = 'flex';
-                } else {
-                    dish.style.display = 'none';
-                }
-
-            });
+            dish.style.display =
+                (category === 'all' || category === itemCategory)
+                    ? 'flex'
+                    : 'none';
 
         });
-    });
 
+    });
 });
 </script>
 
