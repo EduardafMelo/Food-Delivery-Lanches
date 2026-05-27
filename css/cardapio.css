@@ -1,6 +1,6 @@
 /* =========================
    TABS DO CARDÁPIO
-========================= */
+=========================*/
 
 .menu-tabs {
     display: flex;
@@ -47,28 +47,44 @@
     margin-top: 22px;
 }
 
-/* CARD */
+/* =========================
+   CARD
+========================= */
+
 .menu-items .dish {
     grid-column: span 4;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
     text-align: center;
+
+    width: 100%;
 }
 
 /* =========================
-   IMAGEM (CORREÇÃO REAL)
+   IMAGEM
 ========================= */
 
 .menu-items .dish img {
     width: 100%;
-    aspect-ratio: 4 / 3; /* 🔥 resolve distorção no desktop */
+    max-width: 100%;
+
+    aspect-ratio: 4 / 3;
+
     object-fit: cover;
     object-position: center;
+
     border-radius: 18px;
+
     display: block;
+
     background: #f5f5f5;
+
     transition: transform 0.3s ease;
+
+    margin: 0 auto; /* 🔥 centraliza */
 }
 
 .menu-items .dish img:hover {
@@ -90,6 +106,15 @@
 
     .menu-items .dish {
         grid-column: span 12;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-items .dish img {
+        width: 100%;
+        max-width: 320px; /* 🔥 impede ficar colada na esquerda */
+        margin: 0 auto;
     }
 }
 
