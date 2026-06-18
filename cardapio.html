@@ -209,32 +209,6 @@
 
 </main>
 
-<!-- FILTRO FUNCIONANDO -->
-<script>
-document.querySelectorAll('.menu-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-
-        document.querySelectorAll('.menu-tab')
-            .forEach(t => t.classList.remove('active'));
-
-        tab.classList.add('active');
-
-        const category = tab.getAttribute('data-category');
-
-        document.querySelectorAll('.dish').forEach(dish => {
-
-            const itemCategory = dish.getAttribute('data-category');
-
-            dish.style.display =
-                (category === 'all' || category === itemCategory)
-                    ? 'flex'
-                    : 'none';
-
-        });
-
-    });
-});
-</script>
 
 </body>
 </html>
