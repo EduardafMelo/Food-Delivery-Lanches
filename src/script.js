@@ -67,7 +67,7 @@ $(document).ready(function() {
 
     // ====== ABAS DO CARDÁPIO (CORRIGIDO) ======
     const menuTabs = document.querySelectorAll('.menu-tab');
-    const menuItems = document.querySelectorAll('#menu_items .dish');
+    const menuItems = document.querySelectorAll('.menu-items .dish');
 
     menuTabs.forEach(tab => {
 
